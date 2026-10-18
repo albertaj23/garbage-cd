@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://garbage-cd.dev/contracts/jvm-engine-result.schema.json",
+  "title": "Garbage-CD JVM engine result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["kind", "jvm", "totals", "perCollector", "collections"],
+  "properties": {
+    "kind": { "const": "jvm" },
+    "jvm": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["version", "vendor", "collector", "flags"],
+      "properties": {
+        "version": { "type": "string" },
+        "vendor": { "type": "string" },
+        "collector": { "enum": ["serial", "g1"] },
+        "flags": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "totals": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "compileMs", "wallTimeMs", "jvmUptimeMs", "gcCount", "gcPauseTotalMs",
+        "allocatedBytesMainThread", "heapPeakUsed", "objectsReclaimed", "objectsMarked",
+        "rootSet", "objectGraph", "edgesExamined"
+      ],
+      "properties": {
+        "compileMs": { "$ref": "#/$defs/metric" },
+        "wallTimeMs": { "$ref": "#/$defs/metric" },
+        "jvmUptimeMs": { "$ref": "#/$defs/metric" },
+        "gcCount": { "$ref": "#/$defs/metric" },
+        "gcPauseTotalMs": { "$ref": "#/$defs/metric" },
+        "allocatedBytesMainThread": { "$ref": "#/$defs/metric" },
+        "heapPeakUsed": { "$ref": "#/$defs/metric" },
+        "objectsReclaimed": { "$ref": "#/$defs/metric" },
+        "objectsMarked": { "$ref": "#/$defs/metric" },
+        "rootSet": { "$ref": "#/$defs/metric" },
+        "objectGraph": { "$ref": "#/$defs/metric" },
+        "edgesExamined": { "$ref": "#/$defs/metric" }
+      }
+    },
+    "perCollector": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "count", "timeMs"],
+        "properties": {
+          "name": { "type": "string" },
+          "count": { "$ref": "#/$defs/metric" },
+          "timeMs": { "$ref": "#/$defs/metric" }
+        }
+      }
+    },
+    "collections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "gcId", "uptimeMs", "kind", "cause", "heapBefore", "heapAfter",
+          "heapCapacity", "pause"
+        ],
+        "properties": {
+          "gcId": { "type": "integer", "minimum": 0 },
+          "uptimeMs": { "type": "number", "minimum": 0 },
+          "kind": { "type": "string" },
+          "cause": { "type": "string" },
+          "heapBefore": { "$ref": "#/$defs/metric" },
+          "heapAfter": { "$ref": "#/$defs/metric" },
+          "heapCapacity": { "$ref": "#/$defs/metric" },
+          "pause": { "$ref": "#/$defs/metric" }
+        }
+      }
+    },
+    "exception": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["className", "message", "stackTop"],
+      "properties": {
+        "className": { "type": "string" },
+        "message": { "type": "string" },
+        "stackTop": { "type": "array", "maxItems": 20, "items": { "type": "string" } }
+      }
+    }
+  },
+  "$defs": {
+    "metric": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "unit", "provenance", "source"],
+      "properties": {
+        "value": { "type": ["number", "null"] },
+        "unit": { "type": "string" },
+        "provenance": {
+          "enum": ["measured", "estimated", "reconstructed", "unavailable"]
+        },
+        "source": { "type": "string" },
+        "note": { "type": "string" }
+      }
+    }
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "kind": "custom",
+  "runtime": {
+    "version": "v2",
+    "gitCommit": "0bbcfb7b5bde",
+    "heap": {
+      "regionSize": 0,
+      "slotReuse": false,
+      "observer": false
+    }
+  },
+  "totals": {
+    "allocations": {
+      "value": 2,
+      "unit": "objects",
+      "provenance": "measured",
+      "source": "gc::GCStats.totalAllocations"
+    },
+    "collections": {
+      "value": 1,
+      "unit": "count",
+      "provenance": "measured",
+      "source": "gc::GCStats.totalCollections"
+    },
+    "freed": {
+      "value": 2,
+      "unit": "objects",
+      "provenance": "measured",
+      "source": "memory::GcDiagnostics.collections.freed"
+    },
+    "liveAfter": {
+      "value": 0,
+      "unit": "objects",
+      "provenance": "measured",
+      "source": "allocations minus cumulative freed"
+    },
+    "estimatedBytesFreed": {
+      "value": 144,
+      "unit": "B",
+      "provenance": "estimated",
+      "source": "sizeof(memory::Object) plus estimated field-node footprint",
+      "note": "sizeof(memory::Object) per object plus sizeof(pair<const string,ObjectHandle>) and two pointers per field; excludes string character storage, allocator, and bucket-array overhead"
+    },
+    "estimatedLiveBytes": {
+      "value": 0,
+      "unit": "B",
+      "provenance": "estimated",
+      "source": "sizeof(memory::Object) plus estimated field-node footprint",
+      "note": "sizeof(memory::Object) per object plus sizeof(pair<const string,ObjectHandle>) and two pointers per field; excludes string character storage, allocator, and bucket-array overhead"
+    },
+    "statementsExecuted": {
+      "value": 6,
+      "unit": "count",
+      "provenance": "measured",
+      "source": "gcd_runner"
+    },
+    "wallTimeMs": {
+      "value": 0.117709,
+      "unit": "ms",
+      "provenance": "measured",
+      "source": "std::chrono::steady_clock"
+    },
+    "pauseFraction": {
+      "value": null,
+      "unit": "ratio",
+      "provenance": "unavailable",
+      "source": "custom-runtime",
+      "note": "single-threaded runtime with explicit collections"
+    }
+  },
+  "collections": [
+    {
+      "gcIndex": 1,
+      "statementIndex": 5,
+      "liveBefore": {
+        "value": 2,
+        "unit": "objects",
+        "provenance": "measured",
+        "source": "memory::GcDiagnostics"
+      },
+      "marked": {
+        "value": 0,
+        "unit": "objects",
+        "provenance": "measured",
+        "source": "memory::GcDiagnostics"
+      },
+      "freed": {
+        "value": 2,
+        "unit": "objects",
+        "provenance": "measured",
+        "source": "memory::GcDiagnostics"
+      },
+      "liveAfter": {
+        "value": 0,
+        "unit": "objects",
+        "provenance": "measured",
+        "source": "memory::GcDiagnostics"
+      },
+      "fieldsScanned": {
+        "value": 0,
+        "unit": "count",
+        "provenance": "measured",
+        "source": "memory::GcDiagnostics"
+      },
+      "refsPushed": {
+        "value": 0,
+        "unit": "count",
+        "provenance": "measured",
+        "source": "memory::GcDiagnostics"
+      },
+      "worklistPeak": {
+        "value": 0,
+        "unit": "entries",
+        "provenance": "measured",
+        "source": "memory::GcDiagnostics"
+      },
+      "slotsScanned": {
+        "value": 4,
+        "unit": "count",
+        "provenance": "measured",
+        "source": "memory::GcDiagnostics"
+      },
+      "markNs": {
+        "value": 625,
+        "unit": "ns",
+        "provenance": "measured",
+        "source": "std::chrono::steady_clock"
+      },
+      "sweepNs": {
+        "value": 416,
+        "unit": "ns",
+        "provenance": "measured",
+        "source": "std::chrono::steady_clock"
+      },
+      "totalNs": {
+        "value": 1250,
+        "unit": "ns",
+        "provenance": "measured",
+        "source": "std::chrono::steady_clock"
+      },
+      "estimatedBytesFreed": {
+        "value": 144,
+        "unit": "B",
+        "provenance": "estimated",
+        "source": "sizeof(memory::Object) plus estimated field-node footprint",
+        "note": "sizeof(memory::Object) per object plus sizeof(pair<const string,ObjectHandle>) and two pointers per field; excludes string character storage, allocator, and bucket-array overhead"
+      }
+    }
+  ],
+  "snapshots": []
+}

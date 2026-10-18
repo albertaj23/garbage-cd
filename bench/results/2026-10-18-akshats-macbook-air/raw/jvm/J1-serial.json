@@ -1,0 +1,165 @@
+{
+ "kind": "jvm",
+ "program": "J1",
+ "collector": "serial",
+ "flags": [
+  "-Xms64m",
+  "-Xmx64m",
+  "-XX:+UseSerialGC",
+  "-XX:ActiveProcessorCount=1",
+  "-XX:-UsePerfData"
+ ],
+ "jdk": "openjdk version \"21.0.12.1\" 2026-08-18 LTS\nOpenJDK Runtime Environment Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS)\nOpenJDK 64-Bit Server VM Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS, mixed mode, sharing)",
+ "runs": [
+  {
+   "wallMs": 119.87579100000006,
+   "jvmUptimeMs": 77,
+   "gcCount": 101,
+   "gcPauseMxBeanMs": 65,
+   "gcCountLog": 101,
+   "gcPauseTotalMs": 66.75300000000001,
+   "heapAfterLastGcBytes": 1048576.0,
+   "heapBeforeFirstGcBytes": 3145728.0,
+   "allocatedBytesMainThread": 23845192,
+   "heapPeakUsedBytes": 3442568,
+   "pauseKinds": [
+    "Full (System.gc())"
+   ]
+  },
+  {
+   "wallMs": 112.02899999999994,
+   "jvmUptimeMs": 74,
+   "gcCount": 101,
+   "gcPauseMxBeanMs": 62,
+   "gcCountLog": 101,
+   "gcPauseTotalMs": 64.60999999999996,
+   "heapAfterLastGcBytes": 1048576.0,
+   "heapBeforeFirstGcBytes": 3145728.0,
+   "allocatedBytesMainThread": 23845192,
+   "heapPeakUsedBytes": 3442568,
+   "pauseKinds": [
+    "Full (System.gc())"
+   ]
+  },
+  {
+   "wallMs": 128.93075,
+   "jvmUptimeMs": 91,
+   "gcCount": 101,
+   "gcPauseMxBeanMs": 79,
+   "gcCountLog": 101,
+   "gcPauseTotalMs": 81.02400000000004,
+   "heapAfterLastGcBytes": 1048576.0,
+   "heapBeforeFirstGcBytes": 3145728.0,
+   "allocatedBytesMainThread": 23845192,
+   "heapPeakUsedBytes": 3442568,
+   "pauseKinds": [
+    "Full (System.gc())"
+   ]
+  },
+  {
+   "wallMs": 123.64016700000002,
+   "jvmUptimeMs": 82,
+   "gcCount": 101,
+   "gcPauseMxBeanMs": 69,
+   "gcCountLog": 101,
+   "gcPauseTotalMs": 71.59600000000003,
+   "heapAfterLastGcBytes": 1048576.0,
+   "heapBeforeFirstGcBytes": 3145728.0,
+   "allocatedBytesMainThread": 23845192,
+   "heapPeakUsedBytes": 3442568,
+   "pauseKinds": [
+    "Full (System.gc())"
+   ]
+  },
+  {
+   "wallMs": 121.00208400000001,
+   "jvmUptimeMs": 80,
+   "gcCount": 101,
+   "gcPauseMxBeanMs": 66,
+   "gcCountLog": 101,
+   "gcPauseTotalMs": 68.64300000000004,
+   "heapAfterLastGcBytes": 1048576.0,
+   "heapBeforeFirstGcBytes": 3145728.0,
+   "allocatedBytesMainThread": 23845192,
+   "heapPeakUsedBytes": 3442568,
+   "pauseKinds": [
+    "Full (System.gc())"
+   ]
+  },
+  {
+   "wallMs": 113.7154170000001,
+   "jvmUptimeMs": 76,
+   "gcCount": 101,
+   "gcPauseMxBeanMs": 64,
+   "gcCountLog": 101,
+   "gcPauseTotalMs": 66.27500000000002,
+   "heapAfterLastGcBytes": 1048576.0,
+   "heapBeforeFirstGcBytes": 3145728.0,
+   "allocatedBytesMainThread": 23845192,
+   "heapPeakUsedBytes": 3442568,
+   "pauseKinds": [
+    "Full (System.gc())"
+   ]
+  },
+  {
+   "wallMs": 114.88662500000002,
+   "jvmUptimeMs": 78,
+   "gcCount": 101,
+   "gcPauseMxBeanMs": 65,
+   "gcCountLog": 101,
+   "gcPauseTotalMs": 67.418,
+   "heapAfterLastGcBytes": 1048576.0,
+   "heapBeforeFirstGcBytes": 3145728.0,
+   "allocatedBytesMainThread": 23845192,
+   "heapPeakUsedBytes": 3442568,
+   "pauseKinds": [
+    "Full (System.gc())"
+   ]
+  },
+  {
+   "wallMs": 111.77458299999986,
+   "jvmUptimeMs": 74,
+   "gcCount": 101,
+   "gcPauseMxBeanMs": 62,
+   "gcCountLog": 101,
+   "gcPauseTotalMs": 64.37299999999999,
+   "heapAfterLastGcBytes": 1048576.0,
+   "heapBeforeFirstGcBytes": 3145728.0,
+   "allocatedBytesMainThread": 23845192,
+   "heapPeakUsedBytes": 3442568,
+   "pauseKinds": [
+    "Full (System.gc())"
+   ]
+  },
+  {
+   "wallMs": 114.40495799999995,
+   "jvmUptimeMs": 76,
+   "gcCount": 101,
+   "gcPauseMxBeanMs": 64,
+   "gcCountLog": 101,
+   "gcPauseTotalMs": 66.29200000000002,
+   "heapAfterLastGcBytes": 1048576.0,
+   "heapBeforeFirstGcBytes": 3145728.0,
+   "allocatedBytesMainThread": 23845192,
+   "heapPeakUsedBytes": 3442568,
+   "pauseKinds": [
+    "Full (System.gc())"
+   ]
+  },
+  {
+   "wallMs": 118.46487499999992,
+   "jvmUptimeMs": 78,
+   "gcCount": 101,
+   "gcPauseMxBeanMs": 66,
+   "gcCountLog": 101,
+   "gcPauseTotalMs": 68.50799999999998,
+   "heapAfterLastGcBytes": 1048576.0,
+   "heapBeforeFirstGcBytes": 3145728.0,
+   "allocatedBytesMainThread": 23845192,
+   "heapPeakUsedBytes": 3442568,
+   "pauseKinds": [
+    "Full (System.gc())"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://garbage-cd.dev/contracts/run-request.schema.json",
+  "title": "Garbage-CD run request",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "engine", "source"],
+  "properties": {
+    "schema": { "const": "gcd.run-request/1" },
+    "engine": { "enum": ["jvm", "custom"] },
+    "source": { "type": "string", "maxLength": 65536 },
+    "options": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "jvm": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "collector": { "enum": ["serial", "g1"] },
+            "heapMiB": { "type": "integer", "minimum": 16, "maximum": 512 },
+            "timeoutMs": { "type": "integer", "minimum": 1, "maximum": 30000 }
+          }
+        },
+        "custom": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "traceLevel": { "enum": ["off", "gc", "mutator", "full"] },
+            "batchSize": { "type": "integer", "minimum": 1, "maximum": 8192 },
+            "snapshots": { "type": "boolean" },
+            "regionSize": { "enum": [0, 16, 32, 64, 128, 256] },
+            "slotReuse": { "type": "boolean" }
+          }
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "engine": { "const": "jvm" } } },
+      "then": {
+        "properties": {
+          "options": {
+            "type": "object", "properties": { "custom": false }
+          }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "engine": { "const": "custom" } } },
+      "then": {
+        "properties": {
+          "options": {
+            "type": "object", "properties": { "jvm": false }
+          }
+        }
+      }
+    }
+  ]
+}

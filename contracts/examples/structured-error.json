@@ -1,0 +1,14 @@
+{
+  "code": "RUNTIME_ERROR",
+  "phase": "execute",
+  "message": "Interpreter: cannot assign field 'f' on 'a' because it is not an object",
+  "location": {
+    "line": 1,
+    "column": 8,
+    "endLine": 1,
+    "endColumn": 19,
+    "startOffset": 7,
+    "endOffset": 18,
+    "provenance": "derived"
+  }
+}

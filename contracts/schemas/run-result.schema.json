@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://garbage-cd.dev/contracts/run-result.schema.json",
+  "title": "Garbage-CD run result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema", "runId", "engine", "language", "sourceSha256", "createdAt", "startedAt",
+    "endedAt", "status", "phases", "output", "errors", "staticAnalysis", "engineResult",
+    "limits", "toolVersions"
+  ],
+  "properties": {
+    "schema": { "const": "gcd.run-result/1" },
+    "runId": { "type": "string", "pattern": "^[0-7][0-9A-HJKMNP-TV-Z]{25}$" },
+    "engine": { "enum": ["jvm", "custom"] },
+    "language": { "enum": ["java", "gcd-toy"] },
+    "sourceSha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "createdAt": { "$ref": "#/$defs/timestamp" },
+    "startedAt": { "$ref": "#/$defs/timestamp" },
+    "endedAt": { "$ref": "#/$defs/timestamp" },
+    "status": {
+      "type": "string",
+      "enum": [
+        "queued", "running", "succeeded", "compile_error", "program_error", "timeout",
+        "output_limit", "resource_limit", "cancelled", "internal_error"
+      ]
+    },
+    "phases": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["analysis", "execute"],
+      "properties": {
+        "analysis": { "$ref": "#/$defs/phase" },
+        "compile": { "$ref": "#/$defs/phase" },
+        "execute": { "$ref": "#/$defs/phase" }
+      }
+    },
+    "output": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["stdout", "stderr", "stdoutTruncated", "stderrTruncated"],
+      "properties": {
+        "stdout": { "type": "string" },
+        "stderr": { "type": "string" },
+        "stdoutTruncated": { "type": "boolean" },
+        "stderrTruncated": { "type": "boolean" }
+      }
+    },
+    "errors": {
+      "type": "array",
+      "items": { "$ref": "structured-error.schema.json" }
+    },
+    "staticAnalysis": { "$ref": "static-analysis.schema.json" },
+    "engineResult": {
+      "oneOf": [
+        { "$ref": "custom-engine-result.schema.json" },
+        { "$ref": "jvm-engine-result.schema.json" }
+      ]
+    },
+    "limits": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sourceBytes", "stdoutBytes", "prlimit"],
+      "properties": {
+        "sourceBytes": { "type": "integer", "minimum": 0 },
+        "stdoutBytes": { "type": "integer", "minimum": 0 },
+        "prlimit": { "type": "string", "enum": ["applied", "unsupported-platform"] },
+        "analysisTimeoutMs": { "type": "integer", "minimum": 0 },
+        "executionTimeoutMs": { "type": "integer", "minimum": 0 },
+        "cpuSeconds": { "type": "integer", "minimum": 0 },
+        "heapMiB": { "type": "integer", "minimum": 0 },
+        "fileBytes": { "type": "integer", "minimum": 0 },
+        "openFiles": { "type": "integer", "minimum": 0 },
+        "addressSpaceBytes": { "type": ["integer", "null"], "minimum": 0 }
+      }
+    },
+    "toolVersions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["controller", "gitCommit"],
+      "properties": {
+        "controller": { "type": "string" },
+        "runner": { "type": "string" },
+        "analyzer": { "type": "string" },
+        "jdk": { "type": "string" },
+        "gitCommit": { "type": "string" }
+      }
+    },
+    "trace": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["available", "complete", "eventCount", "droppedCount", "batchCount"],
+      "properties": {
+        "available": { "type": "boolean" },
+        "complete": { "type": "boolean" },
+        "eventCount": { "type": "integer", "minimum": 0 },
+        "droppedCount": { "type": "integer", "minimum": 0 },
+        "batchCount": { "type": "integer", "minimum": 0 }
+      }
+    }
+  },
+  "$defs": {
+    "timestamp": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$"
+    },
+    "metric": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "unit", "provenance", "source"],
+      "properties": {
+        "value": { "type": ["number", "null"] },
+        "unit": { "type": "string" },
+        "provenance": {
+          "type": "string",
+          "enum": ["measured", "estimated", "reconstructed", "unavailable"]
+        },
+        "source": { "type": "string" },
+        "note": { "type": "string" }
+      }
+    },
+    "phase": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "durationMs"],
+      "properties": {
+        "status": { "type": "string", "enum": ["ok", "failed", "skipped", "killed"] },
+        "durationMs": { "$ref": "#/$defs/metric" },
+        "exitCode": { "type": "integer" },
+        "signal": { "type": "string" }
+      }
+    }
+  }
+}

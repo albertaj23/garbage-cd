@@ -1,0 +1,6 @@
+a = new Object();
+b = new Object();
+a.ref = b;
+a = null;
+b = null;
+gc();

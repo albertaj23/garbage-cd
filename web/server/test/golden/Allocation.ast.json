@@ -1,0 +1,783 @@
+{
+  "schema": "gcd.static-analysis/1",
+  "language": "java",
+  "ast": {
+    "id": 0,
+    "kind": "COMPILATION_UNIT",
+    "span": {
+      "start": 0,
+      "end": 294,
+      "line": 1,
+      "column": 1,
+      "endLine": 9,
+      "endColumn": 2,
+      "provenance": "compiler"
+    },
+    "children": [
+      {
+        "id": 1,
+        "kind": "CLASS",
+        "label": "Allocation",
+        "span": {
+          "start": 0,
+          "end": 294,
+          "line": 1,
+          "column": 1,
+          "endLine": 9,
+          "endColumn": 2,
+          "provenance": "compiler"
+        },
+        "children": [
+          {
+            "id": 2,
+            "kind": "MODIFIERS",
+            "label": "[public]",
+            "span": {
+              "start": 0,
+              "end": 6,
+              "line": 1,
+              "column": 1,
+              "endLine": 1,
+              "endColumn": 7,
+              "provenance": "compiler"
+            },
+            "children": []
+          },
+          {
+            "id": 3,
+            "kind": "METHOD",
+            "label": "main",
+            "span": {
+              "start": 30,
+              "end": 292,
+              "line": 2,
+              "column": 5,
+              "endLine": 8,
+              "endColumn": 6,
+              "provenance": "compiler"
+            },
+            "children": [
+              {
+                "id": 4,
+                "kind": "MODIFIERS",
+                "label": "[public, static]",
+                "span": {
+                  "start": 30,
+                  "end": 43,
+                  "line": 2,
+                  "column": 5,
+                  "endLine": 2,
+                  "endColumn": 18,
+                  "provenance": "compiler"
+                },
+                "children": []
+              },
+              {
+                "id": 5,
+                "kind": "PRIMITIVE_TYPE",
+                "label": "void",
+                "span": {
+                  "start": 44,
+                  "end": 48,
+                  "line": 2,
+                  "column": 19,
+                  "endLine": 2,
+                  "endColumn": 23,
+                  "provenance": "compiler"
+                },
+                "children": []
+              },
+              {
+                "id": 6,
+                "kind": "VARIABLE",
+                "label": "args",
+                "span": {
+                  "start": 54,
+                  "end": 67,
+                  "line": 2,
+                  "column": 29,
+                  "endLine": 2,
+                  "endColumn": 42,
+                  "provenance": "compiler"
+                },
+                "children": [
+                  {
+                    "id": 7,
+                    "kind": "MODIFIERS",
+                    "label": "[]",
+                    "synthetic": true,
+                    "children": []
+                  },
+                  {
+                    "id": 8,
+                    "kind": "ARRAY_TYPE",
+                    "span": {
+                      "start": 54,
+                      "end": 62,
+                      "line": 2,
+                      "column": 29,
+                      "endLine": 2,
+                      "endColumn": 37,
+                      "provenance": "compiler"
+                    },
+                    "children": [
+                      {
+                        "id": 9,
+                        "kind": "IDENTIFIER",
+                        "label": "String",
+                        "span": {
+                          "start": 54,
+                          "end": 60,
+                          "line": 2,
+                          "column": 29,
+                          "endLine": 2,
+                          "endColumn": 35,
+                          "provenance": "compiler"
+                        },
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 10,
+                "kind": "BLOCK",
+                "span": {
+                  "start": 69,
+                  "end": 292,
+                  "line": 2,
+                  "column": 44,
+                  "endLine": 8,
+                  "endColumn": 6,
+                  "provenance": "compiler"
+                },
+                "children": [
+                  {
+                    "id": 11,
+                    "kind": "VARIABLE",
+                    "label": "values",
+                    "span": {
+                      "start": 79,
+                      "end": 115,
+                      "line": 3,
+                      "column": 9,
+                      "endLine": 3,
+                      "endColumn": 45,
+                      "provenance": "compiler"
+                    },
+                    "children": [
+                      {
+                        "id": 12,
+                        "kind": "MODIFIERS",
+                        "label": "[]",
+                        "synthetic": true,
+                        "children": []
+                      },
+                      {
+                        "id": 13,
+                        "kind": "ARRAY_TYPE",
+                        "span": {
+                          "start": 79,
+                          "end": 87,
+                          "line": 3,
+                          "column": 9,
+                          "endLine": 3,
+                          "endColumn": 17,
+                          "provenance": "compiler"
+                        },
+                        "children": [
+                          {
+                            "id": 14,
+                            "kind": "ARRAY_TYPE",
+                            "span": {
+                              "start": 79,
+                              "end": 87,
+                              "line": 3,
+                              "column": 9,
+                              "endLine": 3,
+                              "endColumn": 17,
+                              "provenance": "compiler"
+                            },
+                            "children": [
+                              {
+                                "id": 15,
+                                "kind": "PRIMITIVE_TYPE",
+                                "label": "byte",
+                                "span": {
+                                  "start": 79,
+                                  "end": 83,
+                                  "line": 3,
+                                  "column": 9,
+                                  "endLine": 3,
+                                  "endColumn": 13,
+                                  "provenance": "compiler"
+                                },
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": 16,
+                        "kind": "NEW_ARRAY",
+                        "span": {
+                          "start": 97,
+                          "end": 114,
+                          "line": 3,
+                          "column": 27,
+                          "endLine": 3,
+                          "endColumn": 44,
+                          "provenance": "compiler"
+                        },
+                        "children": [
+                          {
+                            "id": 17,
+                            "kind": "ARRAY_TYPE",
+                            "span": {
+                              "start": 101,
+                              "end": 114,
+                              "line": 3,
+                              "column": 31,
+                              "endLine": 3,
+                              "endColumn": 44,
+                              "provenance": "compiler"
+                            },
+                            "children": [
+                              {
+                                "id": 18,
+                                "kind": "PRIMITIVE_TYPE",
+                                "label": "byte",
+                                "span": {
+                                  "start": 101,
+                                  "end": 105,
+                                  "line": 3,
+                                  "column": 31,
+                                  "endLine": 3,
+                                  "endColumn": 35,
+                                  "provenance": "compiler"
+                                },
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "id": 19,
+                            "kind": "INT_LITERAL",
+                            "label": "2000",
+                            "span": {
+                              "start": 106,
+                              "end": 111,
+                              "line": 3,
+                              "column": 36,
+                              "endLine": 3,
+                              "endColumn": 41,
+                              "provenance": "compiler"
+                            },
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": 20,
+                    "kind": "FOR_LOOP",
+                    "span": {
+                      "start": 124,
+                      "end": 216,
+                      "line": 4,
+                      "column": 9,
+                      "endLine": 6,
+                      "endColumn": 10,
+                      "provenance": "compiler"
+                    },
+                    "children": [
+                      {
+                        "id": 21,
+                        "kind": "VARIABLE",
+                        "label": "i",
+                        "span": {
+                          "start": 129,
+                          "end": 138,
+                          "line": 4,
+                          "column": 14,
+                          "endLine": 4,
+                          "endColumn": 23,
+                          "provenance": "compiler"
+                        },
+                        "children": [
+                          {
+                            "id": 22,
+                            "kind": "MODIFIERS",
+                            "label": "[]",
+                            "synthetic": true,
+                            "children": []
+                          },
+                          {
+                            "id": 23,
+                            "kind": "PRIMITIVE_TYPE",
+                            "label": "int",
+                            "span": {
+                              "start": 129,
+                              "end": 132,
+                              "line": 4,
+                              "column": 14,
+                              "endLine": 4,
+                              "endColumn": 17,
+                              "provenance": "compiler"
+                            },
+                            "children": []
+                          },
+                          {
+                            "id": 24,
+                            "kind": "INT_LITERAL",
+                            "label": "0",
+                            "span": {
+                              "start": 137,
+                              "end": 138,
+                              "line": 4,
+                              "column": 22,
+                              "endLine": 4,
+                              "endColumn": 23,
+                              "provenance": "compiler"
+                            },
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": 25,
+                        "kind": "LESS_THAN",
+                        "span": {
+                          "start": 140,
+                          "end": 157,
+                          "line": 4,
+                          "column": 25,
+                          "endLine": 4,
+                          "endColumn": 42,
+                          "provenance": "compiler"
+                        },
+                        "children": [
+                          {
+                            "id": 26,
+                            "kind": "IDENTIFIER",
+                            "label": "i",
+                            "span": {
+                              "start": 140,
+                              "end": 141,
+                              "line": 4,
+                              "column": 25,
+                              "endLine": 4,
+                              "endColumn": 26,
+                              "provenance": "compiler"
+                            },
+                            "children": []
+                          },
+                          {
+                            "id": 27,
+                            "kind": "MEMBER_SELECT",
+                            "label": "length",
+                            "span": {
+                              "start": 144,
+                              "end": 157,
+                              "line": 4,
+                              "column": 29,
+                              "endLine": 4,
+                              "endColumn": 42,
+                              "provenance": "compiler"
+                            },
+                            "children": [
+                              {
+                                "id": 28,
+                                "kind": "IDENTIFIER",
+                                "label": "values",
+                                "span": {
+                                  "start": 144,
+                                  "end": 150,
+                                  "line": 4,
+                                  "column": 29,
+                                  "endLine": 4,
+                                  "endColumn": 35,
+                                  "provenance": "compiler"
+                                },
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": 29,
+                        "kind": "EXPRESSION_STATEMENT",
+                        "span": {
+                          "start": 159,
+                          "end": 162,
+                          "line": 4,
+                          "column": 44,
+                          "endLine": 4,
+                          "endColumn": 47,
+                          "provenance": "compiler"
+                        },
+                        "children": [
+                          {
+                            "id": 30,
+                            "kind": "POSTFIX_INCREMENT",
+                            "span": {
+                              "start": 159,
+                              "end": 162,
+                              "line": 4,
+                              "column": 44,
+                              "endLine": 4,
+                              "endColumn": 47,
+                              "provenance": "compiler"
+                            },
+                            "children": [
+                              {
+                                "id": 31,
+                                "kind": "IDENTIFIER",
+                                "label": "i",
+                                "span": {
+                                  "start": 159,
+                                  "end": 160,
+                                  "line": 4,
+                                  "column": 44,
+                                  "endLine": 4,
+                                  "endColumn": 45,
+                                  "provenance": "compiler"
+                                },
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": 32,
+                        "kind": "BLOCK",
+                        "span": {
+                          "start": 164,
+                          "end": 216,
+                          "line": 4,
+                          "column": 49,
+                          "endLine": 6,
+                          "endColumn": 10,
+                          "provenance": "compiler"
+                        },
+                        "children": [
+                          {
+                            "id": 33,
+                            "kind": "EXPRESSION_STATEMENT",
+                            "span": {
+                              "start": 178,
+                              "end": 206,
+                              "line": 5,
+                              "column": 13,
+                              "endLine": 5,
+                              "endColumn": 41,
+                              "provenance": "compiler"
+                            },
+                            "children": [
+                              {
+                                "id": 34,
+                                "kind": "ASSIGNMENT",
+                                "span": {
+                                  "start": 178,
+                                  "end": 205,
+                                  "line": 5,
+                                  "column": 13,
+                                  "endLine": 5,
+                                  "endColumn": 40,
+                                  "provenance": "compiler"
+                                },
+                                "children": [
+                                  {
+                                    "id": 35,
+                                    "kind": "ARRAY_ACCESS",
+                                    "span": {
+                                      "start": 178,
+                                      "end": 187,
+                                      "line": 5,
+                                      "column": 13,
+                                      "endLine": 5,
+                                      "endColumn": 22,
+                                      "provenance": "compiler"
+                                    },
+                                    "children": [
+                                      {
+                                        "id": 36,
+                                        "kind": "IDENTIFIER",
+                                        "label": "values",
+                                        "span": {
+                                          "start": 178,
+                                          "end": 184,
+                                          "line": 5,
+                                          "column": 13,
+                                          "endLine": 5,
+                                          "endColumn": 19,
+                                          "provenance": "compiler"
+                                        },
+                                        "children": []
+                                      },
+                                      {
+                                        "id": 37,
+                                        "kind": "IDENTIFIER",
+                                        "label": "i",
+                                        "span": {
+                                          "start": 185,
+                                          "end": 186,
+                                          "line": 5,
+                                          "column": 20,
+                                          "endLine": 5,
+                                          "endColumn": 21,
+                                          "provenance": "compiler"
+                                        },
+                                        "children": []
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "id": 38,
+                                    "kind": "NEW_ARRAY",
+                                    "span": {
+                                      "start": 190,
+                                      "end": 205,
+                                      "line": 5,
+                                      "column": 25,
+                                      "endLine": 5,
+                                      "endColumn": 40,
+                                      "provenance": "compiler"
+                                    },
+                                    "children": [
+                                      {
+                                        "id": 39,
+                                        "kind": "PRIMITIVE_TYPE",
+                                        "label": "byte",
+                                        "span": {
+                                          "start": 194,
+                                          "end": 198,
+                                          "line": 5,
+                                          "column": 29,
+                                          "endLine": 5,
+                                          "endColumn": 33,
+                                          "provenance": "compiler"
+                                        },
+                                        "children": []
+                                      },
+                                      {
+                                        "id": 40,
+                                        "kind": "INT_LITERAL",
+                                        "label": "1024",
+                                        "span": {
+                                          "start": 199,
+                                          "end": 204,
+                                          "line": 5,
+                                          "column": 34,
+                                          "endLine": 5,
+                                          "endColumn": 39,
+                                          "provenance": "compiler"
+                                        },
+                                        "children": []
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": 41,
+                    "kind": "EXPRESSION_STATEMENT",
+                    "span": {
+                      "start": 225,
+                      "end": 286,
+                      "line": 7,
+                      "column": 9,
+                      "endLine": 7,
+                      "endColumn": 70,
+                      "provenance": "compiler"
+                    },
+                    "children": [
+                      {
+                        "id": 42,
+                        "kind": "METHOD_INVOCATION",
+                        "span": {
+                          "start": 225,
+                          "end": 285,
+                          "line": 7,
+                          "column": 9,
+                          "endLine": 7,
+                          "endColumn": 69,
+                          "provenance": "compiler"
+                        },
+                        "children": [
+                          {
+                            "id": 43,
+                            "kind": "MEMBER_SELECT",
+                            "label": "println",
+                            "span": {
+                              "start": 225,
+                              "end": 243,
+                              "line": 7,
+                              "column": 9,
+                              "endLine": 7,
+                              "endColumn": 27,
+                              "provenance": "compiler"
+                            },
+                            "children": [
+                              {
+                                "id": 44,
+                                "kind": "MEMBER_SELECT",
+                                "label": "out",
+                                "span": {
+                                  "start": 225,
+                                  "end": 235,
+                                  "line": 7,
+                                  "column": 9,
+                                  "endLine": 7,
+                                  "endColumn": 19,
+                                  "provenance": "compiler"
+                                },
+                                "children": [
+                                  {
+                                    "id": 45,
+                                    "kind": "IDENTIFIER",
+                                    "label": "System",
+                                    "span": {
+                                      "start": 225,
+                                      "end": 231,
+                                      "line": 7,
+                                      "column": 9,
+                                      "endLine": 7,
+                                      "endColumn": 15,
+                                      "provenance": "compiler"
+                                    },
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "id": 46,
+                            "kind": "PLUS",
+                            "span": {
+                              "start": 244,
+                              "end": 284,
+                              "line": 7,
+                              "column": 28,
+                              "endLine": 7,
+                              "endColumn": 68,
+                              "provenance": "compiler"
+                            },
+                            "children": [
+                              {
+                                "id": 47,
+                                "kind": "PLUS",
+                                "span": {
+                                  "start": 244,
+                                  "end": 272,
+                                  "line": 7,
+                                  "column": 28,
+                                  "endLine": 7,
+                                  "endColumn": 56,
+                                  "provenance": "compiler"
+                                },
+                                "children": [
+                                  {
+                                    "id": 48,
+                                    "kind": "STRING_LITERAL",
+                                    "label": "allocated ",
+                                    "span": {
+                                      "start": 244,
+                                      "end": 256,
+                                      "line": 7,
+                                      "column": 28,
+                                      "endLine": 7,
+                                      "endColumn": 40,
+                                      "provenance": "compiler"
+                                    },
+                                    "children": []
+                                  },
+                                  {
+                                    "id": 49,
+                                    "kind": "MEMBER_SELECT",
+                                    "label": "length",
+                                    "span": {
+                                      "start": 259,
+                                      "end": 272,
+                                      "line": 7,
+                                      "column": 43,
+                                      "endLine": 7,
+                                      "endColumn": 56,
+                                      "provenance": "compiler"
+                                    },
+                                    "children": [
+                                      {
+                                        "id": 50,
+                                        "kind": "IDENTIFIER",
+                                        "label": "values",
+                                        "span": {
+                                          "start": 259,
+                                          "end": 265,
+                                          "line": 7,
+                                          "column": 43,
+                                          "endLine": 7,
+                                          "endColumn": 49,
+                                          "provenance": "compiler"
+                                        },
+                                        "children": []
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "id": 51,
+                                "kind": "STRING_LITERAL",
+                                "label": " arrays",
+                                "span": {
+                                  "start": 275,
+                                  "end": 284,
+                                  "line": 7,
+                                  "column": 59,
+                                  "endLine": 7,
+                                  "endColumn": 68,
+                                  "provenance": "compiler"
+                                },
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "nodeCount": 52,
+  "truncated": false,
+  "diagnostics": [],
+  "java": {
+    "mainClass": "Allocation",
+    "publicTypeName": "Allocation",
+    "packageName": null,
+    "compileMs": {
+      "value": 0,
+      "unit": "ms",
+      "provenance": "measured",
+      "source": "gcd-java-analyzer"
+    }
+  }
+}

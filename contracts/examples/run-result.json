@@ -1,0 +1,337 @@
+{
+  "schema": "gcd.run-result/1",
+  "runId": "01M5574Y1TXBKYRW28CMVMZD2J",
+  "engine": "custom",
+  "language": "gcd-toy",
+  "sourceSha256": "d93490c93f912eb702e05513bca543552d1549227bbd25160b2b25b37b23ed7a",
+  "createdAt": "2026-10-17T15:19:38.298Z",
+  "startedAt": "2026-10-17T15:19:38.298Z",
+  "endedAt": "2026-10-17T15:19:38.298Z",
+  "status": "succeeded",
+  "phases": {
+    "analysis": {
+      "status": "ok",
+      "durationMs": {
+        "value": 0.016417,
+        "unit": "ms",
+        "provenance": "measured",
+        "source": "std::chrono::steady_clock"
+      }
+    },
+    "execute": {
+      "status": "ok",
+      "durationMs": {
+        "value": 0.014708,
+        "unit": "ms",
+        "provenance": "measured",
+        "source": "std::chrono::steady_clock"
+      }
+    }
+  },
+  "output": {
+    "stdout": "gc() called:\n  objects collected this run:    2\n  live objects after collection: 0\n  total allocations so far:      2\n  total collections so far:      1\n",
+    "stderr": "",
+    "stdoutTruncated": false,
+    "stderrTruncated": false
+  },
+  "errors": [],
+  "staticAnalysis": {
+    "schema": "gcd.static-analysis/1",
+    "language": "gcd-toy",
+    "ast": {
+      "id": 0,
+      "kind": "Program",
+      "children": [
+        {
+          "id": 1,
+          "kind": "Assign",
+          "label": "a",
+          "span": {
+            "start": 0,
+            "end": 17,
+            "line": 1,
+            "column": 1,
+            "endLine": 1,
+            "endColumn": 18,
+            "provenance": "derived"
+          },
+          "children": [
+            {
+              "id": 2,
+              "kind": "NewObject",
+              "label": "Object",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "kind": "Assign",
+          "label": "b",
+          "span": {
+            "start": 18,
+            "end": 35,
+            "line": 2,
+            "column": 1,
+            "endLine": 2,
+            "endColumn": 18,
+            "provenance": "derived"
+          },
+          "children": [
+            {
+              "id": 4,
+              "kind": "NewObject",
+              "label": "Object",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "kind": "FieldAssign",
+          "label": "a.ref",
+          "span": {
+            "start": 36,
+            "end": 46,
+            "line": 3,
+            "column": 1,
+            "endLine": 3,
+            "endColumn": 11,
+            "provenance": "derived"
+          },
+          "children": [
+            {
+              "id": 6,
+              "kind": "Identifier",
+              "label": "b",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "kind": "Assign",
+          "label": "a",
+          "span": {
+            "start": 47,
+            "end": 56,
+            "line": 4,
+            "column": 1,
+            "endLine": 4,
+            "endColumn": 10,
+            "provenance": "derived"
+          },
+          "children": [
+            {
+              "id": 8,
+              "kind": "NullLiteral",
+              "label": "null",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "kind": "Assign",
+          "label": "b",
+          "span": {
+            "start": 57,
+            "end": 66,
+            "line": 5,
+            "column": 1,
+            "endLine": 5,
+            "endColumn": 10,
+            "provenance": "derived"
+          },
+          "children": [
+            {
+              "id": 10,
+              "kind": "NullLiteral",
+              "label": "null",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": 11,
+          "kind": "GcCall",
+          "label": "gc",
+          "span": {
+            "start": 67,
+            "end": 72,
+            "line": 6,
+            "column": 1,
+            "endLine": 6,
+            "endColumn": 6,
+            "provenance": "derived"
+          },
+          "children": []
+        }
+      ]
+    },
+    "nodeCount": 12,
+    "truncated": false,
+    "diagnostics": []
+  },
+  "engineResult": {
+    "kind": "custom",
+    "runtime": {
+      "version": "v2",
+      "gitCommit": "0bbcfb7b5bde",
+      "heap": {
+        "regionSize": 0,
+        "slotReuse": false,
+        "observer": false
+      }
+    },
+    "totals": {
+      "allocations": {
+        "value": 2,
+        "unit": "objects",
+        "provenance": "measured",
+        "source": "gc::GCStats.totalAllocations"
+      },
+      "collections": {
+        "value": 1,
+        "unit": "count",
+        "provenance": "measured",
+        "source": "gc::GCStats.totalCollections"
+      },
+      "freed": {
+        "value": 2,
+        "unit": "objects",
+        "provenance": "measured",
+        "source": "memory::GcDiagnostics.collections.freed"
+      },
+      "liveAfter": {
+        "value": 0,
+        "unit": "objects",
+        "provenance": "measured",
+        "source": "allocations minus cumulative freed"
+      },
+      "estimatedBytesFreed": {
+        "value": 144,
+        "unit": "B",
+        "provenance": "estimated",
+        "source": "sizeof(memory::Object) plus estimated field-node footprint",
+        "note": "sizeof(memory::Object) per object plus sizeof(pair<const string,ObjectHandle>) and two pointers per field; excludes string character storage, allocator, and bucket-array overhead"
+      },
+      "estimatedLiveBytes": {
+        "value": 0,
+        "unit": "B",
+        "provenance": "estimated",
+        "source": "sizeof(memory::Object) plus estimated field-node footprint",
+        "note": "sizeof(memory::Object) per object plus sizeof(pair<const string,ObjectHandle>) and two pointers per field; excludes string character storage, allocator, and bucket-array overhead"
+      },
+      "statementsExecuted": {
+        "value": 6,
+        "unit": "count",
+        "provenance": "measured",
+        "source": "gcd_runner"
+      },
+      "wallTimeMs": {
+        "value": 0.117709,
+        "unit": "ms",
+        "provenance": "measured",
+        "source": "std::chrono::steady_clock"
+      },
+      "pauseFraction": {
+        "value": null,
+        "unit": "ratio",
+        "provenance": "unavailable",
+        "source": "custom-runtime",
+        "note": "single-threaded runtime with explicit collections"
+      }
+    },
+    "collections": [
+      {
+        "gcIndex": 1,
+        "statementIndex": 5,
+        "liveBefore": {
+          "value": 2,
+          "unit": "objects",
+          "provenance": "measured",
+          "source": "memory::GcDiagnostics"
+        },
+        "marked": {
+          "value": 0,
+          "unit": "objects",
+          "provenance": "measured",
+          "source": "memory::GcDiagnostics"
+        },
+        "freed": {
+          "value": 2,
+          "unit": "objects",
+          "provenance": "measured",
+          "source": "memory::GcDiagnostics"
+        },
+        "liveAfter": {
+          "value": 0,
+          "unit": "objects",
+          "provenance": "measured",
+          "source": "memory::GcDiagnostics"
+        },
+        "fieldsScanned": {
+          "value": 0,
+          "unit": "count",
+          "provenance": "measured",
+          "source": "memory::GcDiagnostics"
+        },
+        "refsPushed": {
+          "value": 0,
+          "unit": "count",
+          "provenance": "measured",
+          "source": "memory::GcDiagnostics"
+        },
+        "worklistPeak": {
+          "value": 0,
+          "unit": "entries",
+          "provenance": "measured",
+          "source": "memory::GcDiagnostics"
+        },
+        "slotsScanned": {
+          "value": 4,
+          "unit": "count",
+          "provenance": "measured",
+          "source": "memory::GcDiagnostics"
+        },
+        "markNs": {
+          "value": 625,
+          "unit": "ns",
+          "provenance": "measured",
+          "source": "std::chrono::steady_clock"
+        },
+        "sweepNs": {
+          "value": 416,
+          "unit": "ns",
+          "provenance": "measured",
+          "source": "std::chrono::steady_clock"
+        },
+        "totalNs": {
+          "value": 1250,
+          "unit": "ns",
+          "provenance": "measured",
+          "source": "std::chrono::steady_clock"
+        },
+        "estimatedBytesFreed": {
+          "value": 144,
+          "unit": "B",
+          "provenance": "estimated",
+          "source": "sizeof(memory::Object) plus estimated field-node footprint",
+          "note": "sizeof(memory::Object) per object plus sizeof(pair<const string,ObjectHandle>) and two pointers per field; excludes string character storage, allocator, and bucket-array overhead"
+        }
+      }
+    ],
+    "snapshots": []
+  },
+  "limits": {
+    "sourceBytes": 65536,
+    "stdoutBytes": 65536,
+    "prlimit": "unsupported-platform"
+  },
+  "toolVersions": {
+    "controller": "not-present",
+    "runner": "v2",
+    "gitCommit": "0bbcfb7b5bde"
+  }
+}

@@ -1,0 +1,1 @@
+{"schema":"gcd.region-graph/1","runId":"01J00000000000000000000000","index":0,"point":"gc_end","regionSize":16,"gcIndex":1,"statementIndex":5,"verified":true,"regions":[{"id":0,"slotStart":0,"slotEnd":15,"liveObjects":2,"allocatedTotal":3,"survivorsLastGc":2,"freedLastGc":1,"rootTargets":2,"intraEdges":1}],"edges":[]}

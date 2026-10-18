@@ -1,0 +1,165 @@
+{
+ "kind": "jvm",
+ "program": "J4",
+ "collector": "serial",
+ "flags": [
+  "-Xms64m",
+  "-Xmx64m",
+  "-XX:+UseSerialGC",
+  "-XX:ActiveProcessorCount=1",
+  "-XX:-UsePerfData"
+ ],
+ "jdk": "openjdk version \"21.0.12.1\" 2026-08-18 LTS\nOpenJDK Runtime Environment Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS)\nOpenJDK 64-Bit Server VM Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS, mixed mode, sharing)",
+ "runs": [
+  {
+   "wallMs": 45.41045900000018,
+   "jvmUptimeMs": 7,
+   "gcCount": 3,
+   "gcPauseMxBeanMs": 3,
+   "gcCountLog": 3,
+   "gcPauseTotalMs": 3.843,
+   "heapAfterLastGcBytes": 1048576.0,
+   "heapBeforeFirstGcBytes": 3145728.0,
+   "allocatedBytesMainThread": 307088,
+   "heapPeakUsedBytes": 4378712,
+   "pauseKinds": [
+    "Full (System.gc())"
+   ]
+  },
+  {
+   "wallMs": 46.02279200000048,
+   "jvmUptimeMs": 7,
+   "gcCount": 3,
+   "gcPauseMxBeanMs": 3,
+   "gcCountLog": 3,
+   "gcPauseTotalMs": 3.77,
+   "heapAfterLastGcBytes": 1048576.0,
+   "heapBeforeFirstGcBytes": 3145728.0,
+   "allocatedBytesMainThread": 307088,
+   "heapPeakUsedBytes": 4378712,
+   "pauseKinds": [
+    "Full (System.gc())"
+   ]
+  },
+  {
+   "wallMs": 45.050082999999574,
+   "jvmUptimeMs": 7,
+   "gcCount": 3,
+   "gcPauseMxBeanMs": 3,
+   "gcCountLog": 3,
+   "gcPauseTotalMs": 3.757,
+   "heapAfterLastGcBytes": 1048576.0,
+   "heapBeforeFirstGcBytes": 3145728.0,
+   "allocatedBytesMainThread": 307088,
+   "heapPeakUsedBytes": 4378712,
+   "pauseKinds": [
+    "Full (System.gc())"
+   ]
+  },
+  {
+   "wallMs": 44.82970900000005,
+   "jvmUptimeMs": 8,
+   "gcCount": 3,
+   "gcPauseMxBeanMs": 3,
+   "gcCountLog": 3,
+   "gcPauseTotalMs": 3.714,
+   "heapAfterLastGcBytes": 1048576.0,
+   "heapBeforeFirstGcBytes": 3145728.0,
+   "allocatedBytesMainThread": 307088,
+   "heapPeakUsedBytes": 4378712,
+   "pauseKinds": [
+    "Full (System.gc())"
+   ]
+  },
+  {
+   "wallMs": 46.002458000000246,
+   "jvmUptimeMs": 7,
+   "gcCount": 3,
+   "gcPauseMxBeanMs": 3,
+   "gcCountLog": 3,
+   "gcPauseTotalMs": 3.7560000000000002,
+   "heapAfterLastGcBytes": 1048576.0,
+   "heapBeforeFirstGcBytes": 3145728.0,
+   "allocatedBytesMainThread": 307088,
+   "heapPeakUsedBytes": 4378712,
+   "pauseKinds": [
+    "Full (System.gc())"
+   ]
+  },
+  {
+   "wallMs": 48.902791999999806,
+   "jvmUptimeMs": 8,
+   "gcCount": 3,
+   "gcPauseMxBeanMs": 3,
+   "gcCountLog": 3,
+   "gcPauseTotalMs": 3.783,
+   "heapAfterLastGcBytes": 1048576.0,
+   "heapBeforeFirstGcBytes": 3145728.0,
+   "allocatedBytesMainThread": 307088,
+   "heapPeakUsedBytes": 4378712,
+   "pauseKinds": [
+    "Full (System.gc())"
+   ]
+  },
+  {
+   "wallMs": 46.15800000000014,
+   "jvmUptimeMs": 7,
+   "gcCount": 3,
+   "gcPauseMxBeanMs": 3,
+   "gcCountLog": 3,
+   "gcPauseTotalMs": 3.765,
+   "heapAfterLastGcBytes": 1048576.0,
+   "heapBeforeFirstGcBytes": 3145728.0,
+   "allocatedBytesMainThread": 307088,
+   "heapPeakUsedBytes": 4378712,
+   "pauseKinds": [
+    "Full (System.gc())"
+   ]
+  },
+  {
+   "wallMs": 50.749208000000046,
+   "jvmUptimeMs": 7,
+   "gcCount": 3,
+   "gcPauseMxBeanMs": 3,
+   "gcCountLog": 3,
+   "gcPauseTotalMs": 3.764,
+   "heapAfterLastGcBytes": 1048576.0,
+   "heapBeforeFirstGcBytes": 3145728.0,
+   "allocatedBytesMainThread": 307088,
+   "heapPeakUsedBytes": 4378712,
+   "pauseKinds": [
+    "Full (System.gc())"
+   ]
+  },
+  {
+   "wallMs": 57.704749999999194,
+   "jvmUptimeMs": 8,
+   "gcCount": 3,
+   "gcPauseMxBeanMs": 3,
+   "gcCountLog": 3,
+   "gcPauseTotalMs": 3.952,
+   "heapAfterLastGcBytes": 1048576.0,
+   "heapBeforeFirstGcBytes": 3145728.0,
+   "allocatedBytesMainThread": 307088,
+   "heapPeakUsedBytes": 4378712,
+   "pauseKinds": [
+    "Full (System.gc())"
+   ]
+  },
+  {
+   "wallMs": 51.22725000000017,
+   "jvmUptimeMs": 9,
+   "gcCount": 3,
+   "gcPauseMxBeanMs": 4,
+   "gcCountLog": 3,
+   "gcPauseTotalMs": 4.729,
+   "heapAfterLastGcBytes": 1048576.0,
+   "heapBeforeFirstGcBytes": 3145728.0,
+   "allocatedBytesMainThread": 307088,
+   "heapPeakUsedBytes": 4378712,
+   "pauseKinds": [
+    "Full (System.gc())"
+   ]
+  }
+ ]
+}

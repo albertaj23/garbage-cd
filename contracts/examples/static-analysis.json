@@ -1,0 +1,138 @@
+{
+  "schema": "gcd.static-analysis/1",
+  "language": "gcd-toy",
+  "ast": {
+    "id": 0,
+    "kind": "Program",
+    "children": [
+      {
+        "id": 1,
+        "kind": "Assign",
+        "label": "a",
+        "span": {
+          "start": 0,
+          "end": 17,
+          "line": 1,
+          "column": 1,
+          "endLine": 1,
+          "endColumn": 18,
+          "provenance": "derived"
+        },
+        "children": [
+          {
+            "id": 2,
+            "kind": "NewObject",
+            "label": "Object",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "kind": "Assign",
+        "label": "b",
+        "span": {
+          "start": 18,
+          "end": 35,
+          "line": 2,
+          "column": 1,
+          "endLine": 2,
+          "endColumn": 18,
+          "provenance": "derived"
+        },
+        "children": [
+          {
+            "id": 4,
+            "kind": "NewObject",
+            "label": "Object",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "kind": "FieldAssign",
+        "label": "a.ref",
+        "span": {
+          "start": 36,
+          "end": 46,
+          "line": 3,
+          "column": 1,
+          "endLine": 3,
+          "endColumn": 11,
+          "provenance": "derived"
+        },
+        "children": [
+          {
+            "id": 6,
+            "kind": "Identifier",
+            "label": "b",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "kind": "Assign",
+        "label": "a",
+        "span": {
+          "start": 47,
+          "end": 56,
+          "line": 4,
+          "column": 1,
+          "endLine": 4,
+          "endColumn": 10,
+          "provenance": "derived"
+        },
+        "children": [
+          {
+            "id": 8,
+            "kind": "NullLiteral",
+            "label": "null",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "kind": "Assign",
+        "label": "b",
+        "span": {
+          "start": 57,
+          "end": 66,
+          "line": 5,
+          "column": 1,
+          "endLine": 5,
+          "endColumn": 10,
+          "provenance": "derived"
+        },
+        "children": [
+          {
+            "id": 10,
+            "kind": "NullLiteral",
+            "label": "null",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "kind": "GcCall",
+        "label": "gc",
+        "span": {
+          "start": 67,
+          "end": 72,
+          "line": 6,
+          "column": 1,
+          "endLine": 6,
+          "endColumn": 6,
+          "provenance": "derived"
+        },
+        "children": []
+      }
+    ]
+  },
+  "nodeCount": 12,
+  "truncated": false,
+  "diagnostics": []
+}

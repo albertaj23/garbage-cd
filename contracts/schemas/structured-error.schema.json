@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://garbage-cd.dev/contracts/structured-error.schema.json",
+  "title": "Garbage-CD structured error",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["code", "phase", "message"],
+  "properties": {
+    "code": {
+      "type": "string",
+      "enum": [
+        "SOURCE_TOO_LARGE", "BAD_REQUEST", "BUSY", "LEX_ERROR", "PARSE_ERROR",
+        "COMPILE_ERROR", "NO_MAIN_METHOD", "RUNTIME_ERROR", "UNCAUGHT_EXCEPTION",
+        "OUT_OF_MEMORY", "TIMEOUT", "OUTPUT_LIMIT", "RESOURCE_LIMIT", "PROGRAM_EXIT", "PROCESS_CRASH", "CANCELLED",
+        "ENGINE_UNAVAILABLE", "SCHEMA_VIOLATION", "INTERNAL"
+      ]
+    },
+    "phase": {
+      "type": "string",
+      "enum": ["request", "analysis", "compile", "execute", "controller"]
+    },
+    "message": {
+      "type": "string",
+      "maxLength": 2000
+    },
+    "location": {
+      "$ref": "#/$defs/location"
+    },
+    "detail": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "exceptionClass": { "type": "string" },
+        "stackTop": {
+          "type": "array",
+          "maxItems": 20,
+          "items": { "type": "string" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "location": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["line", "column", "provenance"],
+      "properties": {
+        "line": { "type": "integer", "minimum": 1 },
+        "column": { "type": "integer", "minimum": 1 },
+        "endLine": { "type": "integer", "minimum": 1 },
+        "endColumn": { "type": "integer", "minimum": 1 },
+        "startOffset": { "type": "integer", "minimum": 0 },
+        "endOffset": { "type": "integer", "minimum": 0 },
+        "provenance": { "type": "string", "enum": ["compiler", "derived"] }
+      }
+    }
+  }
+}

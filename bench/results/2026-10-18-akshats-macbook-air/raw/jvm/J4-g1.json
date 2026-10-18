@@ -1,0 +1,165 @@
+{
+ "kind": "jvm",
+ "program": "J4",
+ "collector": "g1",
+ "flags": [
+  "-Xms64m",
+  "-Xmx64m",
+  "-XX:+UseG1GC",
+  "-XX:ActiveProcessorCount=1",
+  "-XX:-UsePerfData"
+ ],
+ "jdk": "openjdk version \"21.0.12.1\" 2026-08-18 LTS\nOpenJDK Runtime Environment Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS)\nOpenJDK 64-Bit Server VM Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS, mixed mode, sharing)",
+ "runs": [
+  {
+   "wallMs": 51.28749999999993,
+   "jvmUptimeMs": 8,
+   "gcCount": 3,
+   "gcPauseMxBeanMs": 5,
+   "gcCountLog": 3,
+   "gcPauseTotalMs": 5.09,
+   "heapAfterLastGcBytes": 1048576.0,
+   "heapBeforeFirstGcBytes": 2097152.0,
+   "allocatedBytesMainThread": 307088,
+   "heapPeakUsedBytes": 2922400,
+   "pauseKinds": [
+    "Full (System.gc())"
+   ]
+  },
+  {
+   "wallMs": 46.81708299999965,
+   "jvmUptimeMs": 8,
+   "gcCount": 3,
+   "gcPauseMxBeanMs": 5,
+   "gcCountLog": 3,
+   "gcPauseTotalMs": 5.108,
+   "heapAfterLastGcBytes": 1048576.0,
+   "heapBeforeFirstGcBytes": 2097152.0,
+   "allocatedBytesMainThread": 307088,
+   "heapPeakUsedBytes": 2922400,
+   "pauseKinds": [
+    "Full (System.gc())"
+   ]
+  },
+  {
+   "wallMs": 46.909791000000034,
+   "jvmUptimeMs": 9,
+   "gcCount": 3,
+   "gcPauseMxBeanMs": 5,
+   "gcCountLog": 3,
+   "gcPauseTotalMs": 5.2,
+   "heapAfterLastGcBytes": 1048576.0,
+   "heapBeforeFirstGcBytes": 2097152.0,
+   "allocatedBytesMainThread": 307088,
+   "heapPeakUsedBytes": 2922400,
+   "pauseKinds": [
+    "Full (System.gc())"
+   ]
+  },
+  {
+   "wallMs": 46.9100409999994,
+   "jvmUptimeMs": 9,
+   "gcCount": 3,
+   "gcPauseMxBeanMs": 5,
+   "gcCountLog": 3,
+   "gcPauseTotalMs": 5.054,
+   "heapAfterLastGcBytes": 1048576.0,
+   "heapBeforeFirstGcBytes": 2097152.0,
+   "allocatedBytesMainThread": 307088,
+   "heapPeakUsedBytes": 2922400,
+   "pauseKinds": [
+    "Full (System.gc())"
+   ]
+  },
+  {
+   "wallMs": 82.47987499999977,
+   "jvmUptimeMs": 10,
+   "gcCount": 3,
+   "gcPauseMxBeanMs": 5,
+   "gcCountLog": 3,
+   "gcPauseTotalMs": 5.546,
+   "heapAfterLastGcBytes": 1048576.0,
+   "heapBeforeFirstGcBytes": 2097152.0,
+   "allocatedBytesMainThread": 307088,
+   "heapPeakUsedBytes": 2922400,
+   "pauseKinds": [
+    "Full (System.gc())"
+   ]
+  },
+  {
+   "wallMs": 48.695166999999984,
+   "jvmUptimeMs": 9,
+   "gcCount": 3,
+   "gcPauseMxBeanMs": 5,
+   "gcCountLog": 3,
+   "gcPauseTotalMs": 5.115,
+   "heapAfterLastGcBytes": 1048576.0,
+   "heapBeforeFirstGcBytes": 2097152.0,
+   "allocatedBytesMainThread": 307088,
+   "heapPeakUsedBytes": 2922400,
+   "pauseKinds": [
+    "Full (System.gc())"
+   ]
+  },
+  {
+   "wallMs": 48.14016699999968,
+   "jvmUptimeMs": 9,
+   "gcCount": 3,
+   "gcPauseMxBeanMs": 5,
+   "gcCountLog": 3,
+   "gcPauseTotalMs": 5.066,
+   "heapAfterLastGcBytes": 1048576.0,
+   "heapBeforeFirstGcBytes": 2097152.0,
+   "allocatedBytesMainThread": 307088,
+   "heapPeakUsedBytes": 2922400,
+   "pauseKinds": [
+    "Full (System.gc())"
+   ]
+  },
+  {
+   "wallMs": 47.60691600000033,
+   "jvmUptimeMs": 9,
+   "gcCount": 3,
+   "gcPauseMxBeanMs": 5,
+   "gcCountLog": 3,
+   "gcPauseTotalMs": 5.047000000000001,
+   "heapAfterLastGcBytes": 1048576.0,
+   "heapBeforeFirstGcBytes": 2097152.0,
+   "allocatedBytesMainThread": 307088,
+   "heapPeakUsedBytes": 2922400,
+   "pauseKinds": [
+    "Full (System.gc())"
+   ]
+  },
+  {
+   "wallMs": 46.74929199999944,
+   "jvmUptimeMs": 9,
+   "gcCount": 3,
+   "gcPauseMxBeanMs": 5,
+   "gcCountLog": 3,
+   "gcPauseTotalMs": 5.138,
+   "heapAfterLastGcBytes": 1048576.0,
+   "heapBeforeFirstGcBytes": 2097152.0,
+   "allocatedBytesMainThread": 307088,
+   "heapPeakUsedBytes": 2922400,
+   "pauseKinds": [
+    "Full (System.gc())"
+   ]
+  },
+  {
+   "wallMs": 46.09937499999983,
+   "jvmUptimeMs": 8,
+   "gcCount": 3,
+   "gcPauseMxBeanMs": 4,
+   "gcCountLog": 3,
+   "gcPauseTotalMs": 5.034,
+   "heapAfterLastGcBytes": 1048576.0,
+   "heapBeforeFirstGcBytes": 2097152.0,
+   "allocatedBytesMainThread": 307088,
+   "heapPeakUsedBytes": 2922400,
+   "pauseKinds": [
+    "Full (System.gc())"
+   ]
+  }
+ ]
+}

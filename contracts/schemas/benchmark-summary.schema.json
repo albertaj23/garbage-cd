@@ -1,0 +1,317 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://garbage-cd.dev/contracts/benchmark-summary.schema.json",
+  "title": "Garbage-CD benchmark summary",
+  "description": "Output of bench/analyze.py for one committed result directory. Ratios are medians relative to A' (V2 with every feature off) with 95% bootstrap CIs.",
+  "type": "object",
+  "required": [
+    "schema",
+    "id",
+    "createdAt",
+    "environment",
+    "method",
+    "collector",
+    "hypotheses",
+    "jvm",
+    "h2"
+  ],
+  "properties": {
+    "schema": {
+      "const": "gcd.benchmark-summary/1"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9._-]+$"
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "environment": {
+      "type": "object"
+    },
+    "method": {
+      "type": "object",
+      "required": [
+        "resamples",
+        "minEffect",
+        "noiseRule"
+      ],
+      "properties": {
+        "resamples": {
+          "type": "integer"
+        },
+        "minEffect": {
+          "type": "number"
+        },
+        "noiseRule": {
+          "type": "string"
+        }
+      }
+    },
+    "noiseFloor": {
+      "type": "object"
+    },
+    "collector": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "workload",
+          "variant",
+          "samples",
+          "medianTotalMs",
+          "medianCollectMs",
+          "total",
+          "collect"
+        ],
+        "properties": {
+          "group": {
+            "type": "string"
+          },
+          "workload": {
+            "type": "string"
+          },
+          "variant": {
+            "type": "string"
+          },
+          "samples": {
+            "type": "integer"
+          },
+          "medianTotalMs": {
+            "type": "number"
+          },
+          "medianCollectMs": {
+            "type": "number"
+          },
+          "total": {
+            "type": "object",
+            "required": [
+              "ratio"
+            ],
+            "properties": {
+              "ratio": {
+                "type": "number"
+              },
+              "lo": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "hi": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "real": {
+                "type": "boolean"
+              }
+            }
+          },
+          "collect": {
+            "type": "object",
+            "required": [
+              "ratio"
+            ],
+            "properties": {
+              "ratio": {
+                "type": "number"
+              },
+              "lo": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "hi": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "real": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    "dormantHooks": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "hypotheses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "statement",
+          "criterion",
+          "verdict",
+          "evidence"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "statement": {
+            "type": "string"
+          },
+          "criterion": {
+            "type": "string"
+          },
+          "verdict": {
+            "enum": [
+              "pass",
+              "fail",
+              "inconclusive"
+            ]
+          },
+          "evidence": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "h2": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "objects",
+          "snapshotMs",
+          "exportMs",
+          "ratio"
+        ],
+        "properties": {
+          "objects": {
+            "type": "integer"
+          },
+          "snapshotMs": {
+            "type": "number"
+          },
+          "exportMs": {
+            "type": "number"
+          },
+          "ratio": {
+            "type": "number"
+          },
+          "lo": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "hi": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "snapshotBytes": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "exportBytes": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "jvm": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "program",
+          "collector",
+          "runs"
+        ],
+        "properties": {
+          "program": {
+            "type": "string"
+          },
+          "collector": {
+            "enum": [
+              "serial",
+              "g1"
+            ]
+          },
+          "runs": {
+            "type": "integer"
+          },
+          "gcCount": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "gcPauseTotalMs": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "heapAfterLastGcBytes": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "allocatedBytesMainThread": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "wallMs": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "jdk": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "shapes": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "h3": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "breakEven": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "barrier": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "w6Rounds": {
+      "type": "object"
+    }
+  }
+}

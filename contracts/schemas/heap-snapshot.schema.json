@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://garbage-cd.dev/contracts/heap-snapshot.schema.json",
+  "title": "Garbage-CD heap snapshot",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "runId",
+    "index",
+    "point",
+    "gcIndex",
+    "statementIndex",
+    "totalObjects",
+    "totalEdges",
+    "truncated",
+    "roots",
+    "objects"
+  ],
+  "properties": {
+    "schema": { "const": "gcd.heap-snapshot/1" },
+    "runId": { "type": "string", "minLength": 1 },
+    "index": { "type": "integer", "minimum": 0 },
+    "point": { "enum": ["mark_complete", "program_end"] },
+    "gcIndex": { "type": ["integer", "null"], "minimum": 0 },
+    "statementIndex": { "type": "integer", "minimum": 0 },
+    "totalObjects": { "type": "integer", "minimum": 0 },
+    "totalEdges": { "type": "integer", "minimum": 0 },
+    "truncated": { "type": "boolean" },
+    "roots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "target"],
+        "properties": {
+          "name": { "type": "string" },
+          "target": { "type": "string", "pattern": "^[0-9]+$" }
+        }
+      }
+    },
+    "objects": {
+      "type": "array",
+      "maxItems": 2000,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "slot",
+          "generation",
+          "region",
+          "allocSeq",
+          "allocStatement",
+          "marked",
+          "fields"
+        ],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[0-9]+$" },
+          "slot": { "type": "integer", "minimum": 0 },
+          "generation": { "type": "integer", "minimum": 0 },
+          "region": { "type": ["integer", "null"], "minimum": 0 },
+          "allocSeq": { "type": "integer", "minimum": 1 },
+          "allocStatement": { "type": "integer", "minimum": 0 },
+          "marked": { "type": ["boolean", "null"] },
+          "fields": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["name", "target"],
+              "properties": {
+                "name": { "type": "string" },
+                "target": { "type": ["string", "null"], "pattern": "^[0-9]+$" }
+              }
+            }
+          },
+          "discoveredBy": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["parent", "field", "root"],
+            "properties": {
+              "parent": { "type": ["string", "null"], "pattern": "^[0-9]+$" },
+              "field": { "type": ["string", "null"] },
+              "root": { "type": ["string", "null"] }
+            }
+          }
+        }
+      }
+    }
+  }
+}

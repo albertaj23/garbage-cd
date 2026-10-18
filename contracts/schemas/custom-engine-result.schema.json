@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://garbage-cd.dev/contracts/custom-engine-result.schema.json",
+  "title": "Garbage-CD custom engine result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["kind", "runtime", "totals", "collections", "snapshots"],
+  "properties": {
+    "kind": { "const": "custom" },
+    "runtime": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["version", "gitCommit", "heap"],
+      "properties": {
+        "version": { "type": "string" },
+        "gitCommit": { "type": "string" },
+        "heap": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["regionSize", "slotReuse", "observer"],
+          "properties": {
+            "regionSize": { "type": "integer", "enum": [0, 16, 32, 64, 128, 256] },
+            "slotReuse": { "type": "boolean" },
+            "observer": { "type": "boolean" }
+          }
+        }
+      }
+    },
+    "totals": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "allocations", "collections", "freed", "liveAfter", "estimatedBytesFreed",
+        "estimatedLiveBytes", "statementsExecuted", "wallTimeMs", "pauseFraction"
+      ],
+      "properties": {
+        "allocations": { "$ref": "#/$defs/metric" },
+        "collections": { "$ref": "#/$defs/metric" },
+        "freed": { "$ref": "#/$defs/metric" },
+        "liveAfter": { "$ref": "#/$defs/metric" },
+        "estimatedBytesFreed": { "$ref": "#/$defs/metric" },
+        "estimatedLiveBytes": { "$ref": "#/$defs/metric" },
+        "statementsExecuted": { "$ref": "#/$defs/metric" },
+        "wallTimeMs": { "$ref": "#/$defs/metric" },
+        "pauseFraction": { "$ref": "#/$defs/metric" }
+      }
+    },
+    "collections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "gcIndex", "statementIndex", "liveBefore", "marked", "freed", "liveAfter",
+          "fieldsScanned", "refsPushed", "worklistPeak", "slotsScanned", "markNs",
+          "sweepNs", "totalNs", "estimatedBytesFreed"
+        ],
+        "properties": {
+          "gcIndex": { "type": "integer", "minimum": 1 },
+          "statementIndex": { "type": "integer", "minimum": 0 },
+          "liveBefore": { "$ref": "#/$defs/metric" },
+          "marked": { "$ref": "#/$defs/metric" },
+          "freed": { "$ref": "#/$defs/metric" },
+          "liveAfter": { "$ref": "#/$defs/metric" },
+          "fieldsScanned": { "$ref": "#/$defs/metric" },
+          "refsPushed": { "$ref": "#/$defs/metric" },
+          "worklistPeak": { "$ref": "#/$defs/metric" },
+          "slotsScanned": { "$ref": "#/$defs/metric" },
+          "markNs": { "$ref": "#/$defs/metric" },
+          "sweepNs": { "$ref": "#/$defs/metric" },
+          "totalNs": { "$ref": "#/$defs/metric" },
+          "estimatedBytesFreed": { "$ref": "#/$defs/metric" }
+        }
+      }
+    },
+    "snapshots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["index", "gcIndex", "point", "objectCount", "truncated"],
+        "properties": {
+          "index": { "type": "integer", "minimum": 0 },
+          "gcIndex": { "type": ["integer", "null"], "minimum": 0 },
+          "point": { "type": "string", "enum": ["mark_complete", "program_end"] },
+          "objectCount": { "type": "integer", "minimum": 0 },
+          "truncated": { "type": "boolean" }
+        }
+      }
+    },
+    "regionGraphs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["index", "gcIndex", "point", "regionCount", "verified"],
+        "properties": {
+          "index": { "type": "integer", "minimum": 0 },
+          "gcIndex": { "type": ["integer", "null"], "minimum": 0 },
+          "point": { "type": "string", "enum": ["gc_end", "program_end"] },
+          "regionCount": { "type": "integer", "minimum": 0 },
+          "verified": { "type": "boolean" }
+        }
+      }
+    },
+    "regionOverview": { "type": "object" }
+  },
+  "$defs": {
+    "metric": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "unit", "provenance", "source"],
+      "properties": {
+        "value": { "type": ["number", "null"] },
+        "unit": { "type": "string" },
+        "provenance": {
+          "type": "string",
+          "enum": ["measured", "estimated", "reconstructed", "unavailable"]
+        },
+        "source": { "type": "string" },
+        "note": { "type": "string" }
+      }
+    }
+  }
+}

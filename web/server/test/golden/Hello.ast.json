@@ -1,0 +1,270 @@
+{
+  "schema": "gcd.static-analysis/1",
+  "language": "java",
+  "ast": {
+    "id": 0,
+    "kind": "COMPILATION_UNIT",
+    "span": {
+      "start": 0,
+      "end": 123,
+      "line": 1,
+      "column": 1,
+      "endLine": 5,
+      "endColumn": 2,
+      "provenance": "compiler"
+    },
+    "children": [
+      {
+        "id": 1,
+        "kind": "CLASS",
+        "label": "Hello",
+        "span": {
+          "start": 0,
+          "end": 123,
+          "line": 1,
+          "column": 1,
+          "endLine": 5,
+          "endColumn": 2,
+          "provenance": "compiler"
+        },
+        "children": [
+          {
+            "id": 2,
+            "kind": "MODIFIERS",
+            "label": "[public]",
+            "span": {
+              "start": 0,
+              "end": 6,
+              "line": 1,
+              "column": 1,
+              "endLine": 1,
+              "endColumn": 7,
+              "provenance": "compiler"
+            },
+            "children": []
+          },
+          {
+            "id": 3,
+            "kind": "METHOD",
+            "label": "main",
+            "span": {
+              "start": 25,
+              "end": 121,
+              "line": 2,
+              "column": 5,
+              "endLine": 4,
+              "endColumn": 6,
+              "provenance": "compiler"
+            },
+            "children": [
+              {
+                "id": 4,
+                "kind": "MODIFIERS",
+                "label": "[public, static]",
+                "span": {
+                  "start": 25,
+                  "end": 38,
+                  "line": 2,
+                  "column": 5,
+                  "endLine": 2,
+                  "endColumn": 18,
+                  "provenance": "compiler"
+                },
+                "children": []
+              },
+              {
+                "id": 5,
+                "kind": "PRIMITIVE_TYPE",
+                "label": "void",
+                "span": {
+                  "start": 39,
+                  "end": 43,
+                  "line": 2,
+                  "column": 19,
+                  "endLine": 2,
+                  "endColumn": 23,
+                  "provenance": "compiler"
+                },
+                "children": []
+              },
+              {
+                "id": 6,
+                "kind": "VARIABLE",
+                "label": "args",
+                "span": {
+                  "start": 49,
+                  "end": 62,
+                  "line": 2,
+                  "column": 29,
+                  "endLine": 2,
+                  "endColumn": 42,
+                  "provenance": "compiler"
+                },
+                "children": [
+                  {
+                    "id": 7,
+                    "kind": "MODIFIERS",
+                    "label": "[]",
+                    "synthetic": true,
+                    "children": []
+                  },
+                  {
+                    "id": 8,
+                    "kind": "ARRAY_TYPE",
+                    "span": {
+                      "start": 49,
+                      "end": 57,
+                      "line": 2,
+                      "column": 29,
+                      "endLine": 2,
+                      "endColumn": 37,
+                      "provenance": "compiler"
+                    },
+                    "children": [
+                      {
+                        "id": 9,
+                        "kind": "IDENTIFIER",
+                        "label": "String",
+                        "span": {
+                          "start": 49,
+                          "end": 55,
+                          "line": 2,
+                          "column": 29,
+                          "endLine": 2,
+                          "endColumn": 35,
+                          "provenance": "compiler"
+                        },
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 10,
+                "kind": "BLOCK",
+                "span": {
+                  "start": 64,
+                  "end": 121,
+                  "line": 2,
+                  "column": 44,
+                  "endLine": 4,
+                  "endColumn": 6,
+                  "provenance": "compiler"
+                },
+                "children": [
+                  {
+                    "id": 11,
+                    "kind": "EXPRESSION_STATEMENT",
+                    "span": {
+                      "start": 74,
+                      "end": 115,
+                      "line": 3,
+                      "column": 9,
+                      "endLine": 3,
+                      "endColumn": 50,
+                      "provenance": "compiler"
+                    },
+                    "children": [
+                      {
+                        "id": 12,
+                        "kind": "METHOD_INVOCATION",
+                        "span": {
+                          "start": 74,
+                          "end": 114,
+                          "line": 3,
+                          "column": 9,
+                          "endLine": 3,
+                          "endColumn": 49,
+                          "provenance": "compiler"
+                        },
+                        "children": [
+                          {
+                            "id": 13,
+                            "kind": "MEMBER_SELECT",
+                            "label": "println",
+                            "span": {
+                              "start": 74,
+                              "end": 92,
+                              "line": 3,
+                              "column": 9,
+                              "endLine": 3,
+                              "endColumn": 27,
+                              "provenance": "compiler"
+                            },
+                            "children": [
+                              {
+                                "id": 14,
+                                "kind": "MEMBER_SELECT",
+                                "label": "out",
+                                "span": {
+                                  "start": 74,
+                                  "end": 84,
+                                  "line": 3,
+                                  "column": 9,
+                                  "endLine": 3,
+                                  "endColumn": 19,
+                                  "provenance": "compiler"
+                                },
+                                "children": [
+                                  {
+                                    "id": 15,
+                                    "kind": "IDENTIFIER",
+                                    "label": "System",
+                                    "span": {
+                                      "start": 74,
+                                      "end": 80,
+                                      "line": 3,
+                                      "column": 9,
+                                      "endLine": 3,
+                                      "endColumn": 15,
+                                      "provenance": "compiler"
+                                    },
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "id": 16,
+                            "kind": "STRING_LITERAL",
+                            "label": "hello from HotSpot",
+                            "span": {
+                              "start": 93,
+                              "end": 113,
+                              "line": 3,
+                              "column": 28,
+                              "endLine": 3,
+                              "endColumn": 48,
+                              "provenance": "compiler"
+                            },
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "nodeCount": 17,
+  "truncated": false,
+  "diagnostics": [],
+  "java": {
+    "mainClass": "Hello",
+    "publicTypeName": "Hello",
+    "packageName": null,
+    "compileMs": {
+      "value": 0,
+      "unit": "ms",
+      "provenance": "measured",
+      "source": "gcd-java-analyzer"
+    }
+  }
+}

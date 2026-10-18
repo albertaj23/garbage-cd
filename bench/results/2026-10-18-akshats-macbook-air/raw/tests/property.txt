@@ -1,0 +1,1 @@
+gc_property_tests: 10000 seeds x 8 variants passed

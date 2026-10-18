@@ -1,0 +1,22 @@
+{
+  "capturedAt": "2026-10-18T05:30:29Z",
+  "os": "Darwin 25.2.0",
+  "machine": "arm64",
+  "python": "3.9.6",
+  "cxx": [
+    "Apple clang version 21.0.0 (clang-2100.1.1.101)"
+  ],
+  "java": "",
+  "gitCommit": "53fcba6410c48443441ff57bda8770c593baef2f",
+  "gitDirty": true,
+  "baselineTag": "7f46d69f5fd269eeb65dc2686dcd4a0bc970604c",
+  "cpuPinning": "none: macOS has no CPU-affinity API (taskset is Linux only)",
+  "cpuModel": "Apple M4",
+  "cores": 10,
+  "ramBytes": 17179869184,
+  "power": "battery",
+  "powerRaw": [
+    "Now drawing from 'Battery Power'"
+  ],
+  "quick": false
+}

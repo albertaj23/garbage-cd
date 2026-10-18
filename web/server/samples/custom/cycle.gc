@@ -1,0 +1,7 @@
+a = new Object();
+b = new Object();
+a.next = b;
+b.next = a;
+a = null;
+b = null;
+gc();

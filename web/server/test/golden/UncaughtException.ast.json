@@ -1,0 +1,238 @@
+{
+  "schema": "gcd.static-analysis/1",
+  "language": "java",
+  "ast": {
+    "id": 0,
+    "kind": "COMPILATION_UNIT",
+    "span": {
+      "start": 0,
+      "end": 146,
+      "line": 1,
+      "column": 1,
+      "endLine": 5,
+      "endColumn": 2,
+      "provenance": "compiler"
+    },
+    "children": [
+      {
+        "id": 1,
+        "kind": "CLASS",
+        "label": "UncaughtException",
+        "span": {
+          "start": 0,
+          "end": 146,
+          "line": 1,
+          "column": 1,
+          "endLine": 5,
+          "endColumn": 2,
+          "provenance": "compiler"
+        },
+        "children": [
+          {
+            "id": 2,
+            "kind": "MODIFIERS",
+            "label": "[public]",
+            "span": {
+              "start": 0,
+              "end": 6,
+              "line": 1,
+              "column": 1,
+              "endLine": 1,
+              "endColumn": 7,
+              "provenance": "compiler"
+            },
+            "children": []
+          },
+          {
+            "id": 3,
+            "kind": "METHOD",
+            "label": "main",
+            "span": {
+              "start": 37,
+              "end": 144,
+              "line": 2,
+              "column": 5,
+              "endLine": 4,
+              "endColumn": 6,
+              "provenance": "compiler"
+            },
+            "children": [
+              {
+                "id": 4,
+                "kind": "MODIFIERS",
+                "label": "[public, static]",
+                "span": {
+                  "start": 37,
+                  "end": 50,
+                  "line": 2,
+                  "column": 5,
+                  "endLine": 2,
+                  "endColumn": 18,
+                  "provenance": "compiler"
+                },
+                "children": []
+              },
+              {
+                "id": 5,
+                "kind": "PRIMITIVE_TYPE",
+                "label": "void",
+                "span": {
+                  "start": 51,
+                  "end": 55,
+                  "line": 2,
+                  "column": 19,
+                  "endLine": 2,
+                  "endColumn": 23,
+                  "provenance": "compiler"
+                },
+                "children": []
+              },
+              {
+                "id": 6,
+                "kind": "VARIABLE",
+                "label": "args",
+                "span": {
+                  "start": 61,
+                  "end": 74,
+                  "line": 2,
+                  "column": 29,
+                  "endLine": 2,
+                  "endColumn": 42,
+                  "provenance": "compiler"
+                },
+                "children": [
+                  {
+                    "id": 7,
+                    "kind": "MODIFIERS",
+                    "label": "[]",
+                    "synthetic": true,
+                    "children": []
+                  },
+                  {
+                    "id": 8,
+                    "kind": "ARRAY_TYPE",
+                    "span": {
+                      "start": 61,
+                      "end": 69,
+                      "line": 2,
+                      "column": 29,
+                      "endLine": 2,
+                      "endColumn": 37,
+                      "provenance": "compiler"
+                    },
+                    "children": [
+                      {
+                        "id": 9,
+                        "kind": "IDENTIFIER",
+                        "label": "String",
+                        "span": {
+                          "start": 61,
+                          "end": 67,
+                          "line": 2,
+                          "column": 29,
+                          "endLine": 2,
+                          "endColumn": 35,
+                          "provenance": "compiler"
+                        },
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 10,
+                "kind": "BLOCK",
+                "span": {
+                  "start": 76,
+                  "end": 144,
+                  "line": 2,
+                  "column": 44,
+                  "endLine": 4,
+                  "endColumn": 6,
+                  "provenance": "compiler"
+                },
+                "children": [
+                  {
+                    "id": 11,
+                    "kind": "THROW",
+                    "span": {
+                      "start": 86,
+                      "end": 138,
+                      "line": 3,
+                      "column": 9,
+                      "endLine": 3,
+                      "endColumn": 61,
+                      "provenance": "compiler"
+                    },
+                    "children": [
+                      {
+                        "id": 12,
+                        "kind": "NEW_CLASS",
+                        "span": {
+                          "start": 92,
+                          "end": 137,
+                          "line": 3,
+                          "column": 15,
+                          "endLine": 3,
+                          "endColumn": 60,
+                          "provenance": "compiler"
+                        },
+                        "children": [
+                          {
+                            "id": 13,
+                            "kind": "IDENTIFIER",
+                            "label": "IllegalStateException",
+                            "span": {
+                              "start": 96,
+                              "end": 117,
+                              "line": 3,
+                              "column": 19,
+                              "endLine": 3,
+                              "endColumn": 40,
+                              "provenance": "compiler"
+                            },
+                            "children": []
+                          },
+                          {
+                            "id": 14,
+                            "kind": "STRING_LITERAL",
+                            "label": "sample exception",
+                            "span": {
+                              "start": 118,
+                              "end": 136,
+                              "line": 3,
+                              "column": 41,
+                              "endLine": 3,
+                              "endColumn": 59,
+                              "provenance": "compiler"
+                            },
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "nodeCount": 15,
+  "truncated": false,
+  "diagnostics": [],
+  "java": {
+    "mainClass": "UncaughtException",
+    "publicTypeName": "UncaughtException",
+    "packageName": null,
+    "compileMs": {
+      "value": 0,
+      "unit": "ms",
+      "provenance": "measured",
+      "source": "gcd-java-analyzer"
+    }
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://garbage-cd.dev/contracts/trace-batch.schema.json",
+  "title": "Garbage-CD trace batch",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "runId",
+    "batch",
+    "firstSeq",
+    "lastSeq",
+    "droppedTotal",
+    "strings",
+    "events"
+  ],
+  "properties": {
+    "schema": { "const": "gcd.trace-batch/1" },
+    "runId": { "type": "string", "minLength": 1 },
+    "batch": { "type": "integer", "minimum": 0 },
+    "firstSeq": { "type": "integer", "minimum": 1 },
+    "lastSeq": { "type": "integer", "minimum": 1 },
+    "droppedTotal": { "type": "integer", "minimum": 0 },
+    "strings": {
+      "type": "object",
+      "propertyNames": { "pattern": "^(0|[1-9][0-9]*)$" },
+      "additionalProperties": { "type": "string" }
+    },
+    "events": {
+      "type": "array",
+      "maxItems": 8192,
+      "items": {
+        "oneOf": [
+          {
+            "type": "array",
+            "prefixItems": [
+              { "type": "integer", "minimum": 1 },
+              { "enum": ["SB", "SE"] },
+              { "type": "integer", "minimum": 0 }
+            ],
+            "minItems": 3,
+            "items": false
+          },
+          {
+            "type": "array",
+            "prefixItems": [
+              { "type": "integer", "minimum": 1 },
+              { "const": "A" },
+              { "type": "integer", "minimum": 0 },
+              { "type": "string", "pattern": "^[0-9]+$" }
+            ],
+            "minItems": 4,
+            "items": false
+          },
+          {
+            "type": "array",
+            "prefixItems": [
+              { "type": "integer", "minimum": 1 },
+              { "enum": ["RS", "RC"] },
+              { "type": "integer", "minimum": 0 },
+              { "type": "integer", "minimum": 0 },
+              { "type": ["string", "null"], "pattern": "^[0-9]+$" }
+            ],
+            "minItems": 5,
+            "items": false
+          },
+          {
+            "type": "array",
+            "prefixItems": [
+              { "type": "integer", "minimum": 1 },
+              { "const": "FW" },
+              { "type": "integer", "minimum": 0 },
+              { "type": "integer", "minimum": 0 },
+              { "type": "string", "pattern": "^[0-9]+$" },
+              { "type": ["string", "null"], "pattern": "^[0-9]+$" },
+              { "type": ["string", "null"], "pattern": "^[0-9]+$" }
+            ],
+            "minItems": 7,
+            "items": false
+          },
+          {
+            "type": "array",
+            "prefixItems": [
+              { "type": "integer", "minimum": 1 },
+              { "const": "GB" },
+              { "type": "integer", "minimum": 0 },
+              { "type": "integer", "minimum": 1 }
+            ],
+            "minItems": 4,
+            "items": false
+          },
+          {
+            "type": "array",
+            "prefixItems": [
+              { "type": "integer", "minimum": 1 },
+              { "const": "GE" },
+              { "type": "integer", "minimum": 0 },
+              { "type": "integer", "minimum": 1 },
+              { "type": "integer", "minimum": 0 },
+              { "type": "integer", "minimum": 0 }
+            ],
+            "minItems": 6,
+            "items": false
+          },
+          {
+            "type": "array",
+            "prefixItems": [
+              { "type": "integer", "minimum": 1 },
+              { "const": "MV" },
+              { "type": "integer", "minimum": 0 },
+              { "type": "string", "pattern": "^[0-9]+$" },
+              { "type": ["string", "null"], "pattern": "^[0-9]+$" },
+              { "type": ["integer", "null"], "minimum": 0 }
+            ],
+            "minItems": 6,
+            "items": false
+          },
+          {
+            "type": "array",
+            "prefixItems": [
+              { "type": "integer", "minimum": 1 },
+              { "const": "SF" },
+              { "type": "integer", "minimum": 0 },
+              { "type": "string", "pattern": "^[0-9]+$" }
+            ],
+            "minItems": 4,
+            "items": false
+          }
+        ]
+      }
+    }
+  }
+}

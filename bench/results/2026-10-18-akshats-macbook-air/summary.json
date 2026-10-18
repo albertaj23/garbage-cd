@@ -1,0 +1,1808 @@
+{
+ "schema": "gcd.benchmark-summary/1",
+ "id": "2026-10-18-akshats-macbook-air",
+ "createdAt": "2026-10-18T05:30:29Z",
+ "environment": {
+  "capturedAt": "2026-10-18T05:30:29Z",
+  "os": "Darwin 25.2.0",
+  "machine": "arm64",
+  "python": "3.9.6",
+  "cxx": [
+   "Apple clang version 21.0.0 (clang-2100.1.1.101)"
+  ],
+  "java": "",
+  "gitCommit": "53fcba6410c48443441ff57bda8770c593baef2f",
+  "gitDirty": true,
+  "baselineTag": "7f46d69f5fd269eeb65dc2686dcd4a0bc970604c",
+  "cpuPinning": "none: macOS has no CPU-affinity API (taskset is Linux only)",
+  "cpuModel": "Apple M4",
+  "cores": 10,
+  "ramBytes": 17179869184,
+  "power": "battery",
+  "powerRaw": [
+   "Now drawing from 'Battery Power'"
+  ],
+  "quick": false
+ },
+ "method": {
+  "resamples": 10000,
+  "minEffect": 0.02,
+  "warmupDiscarded": 5,
+  "measuredPerProcess": 10,
+  "processes": 3,
+  "noiseRule": "difference is real if the 95% CI excludes 1 and the effect exceeds max(2%, |A'2/A' - 1|)"
+ },
+ "collector": [
+  {
+   "group": "main",
+   "workload": "W1",
+   "variant": "A",
+   "samples": 30,
+   "medianTotalMs": 50.7312,
+   "medianCollectMs": 37.89605,
+   "total": {
+    "ratio": 0.8721571324193063,
+    "lo": 0.8575274390998322,
+    "hi": 0.8796932440741312,
+    "real": true
+   },
+   "collect": {
+    "ratio": 0.873480757218492,
+    "lo": 0.8550281239212394,
+    "hi": 0.882581787673923,
+    "real": true
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W1",
+   "variant": "Aprime",
+   "samples": 30,
+   "medianTotalMs": 58.167500000000004,
+   "medianCollectMs": 43.3851,
+   "total": {
+    "ratio": 1.0,
+    "lo": 1.0,
+    "hi": 1.0,
+    "real": false
+   },
+   "collect": {
+    "ratio": 1.0,
+    "lo": 1.0,
+    "hi": 1.0,
+    "real": false
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W1",
+   "variant": "Aprime2",
+   "samples": 30,
+   "medianTotalMs": 57.8365,
+   "medianCollectMs": 43.1254,
+   "total": {
+    "ratio": 0.9943095371126488,
+    "lo": 0.9801706133155075,
+    "hi": 1.0004814187072222,
+    "real": false
+   },
+   "collect": {
+    "ratio": 0.9940140739562661,
+    "lo": 0.9754391433288838,
+    "hi": 1.0055964264509427,
+    "real": false
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W1",
+   "variant": "B",
+   "samples": 30,
+   "medianTotalMs": 60.35325,
+   "medianCollectMs": 45.337450000000004,
+   "total": {
+    "ratio": 1.037576825546912,
+    "lo": 1.0208842902233815,
+    "hi": 1.04488170669414,
+    "real": true
+   },
+   "collect": {
+    "ratio": 1.0450004725124524,
+    "lo": 1.0244010829266295,
+    "hi": 1.0584809562906168,
+    "real": true
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W1",
+   "variant": "D",
+   "samples": 30,
+   "medianTotalMs": 362.433,
+   "medianCollectMs": 106.896,
+   "total": {
+    "ratio": 6.230850560880216,
+    "lo": 6.100383726708711,
+    "hi": 6.314496378083719,
+    "real": true
+   },
+   "collect": {
+    "ratio": 2.4638873714708507,
+    "lo": 2.41683123888141,
+    "hi": 2.511814692632071,
+    "real": true
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W1",
+   "variant": "E",
+   "samples": 30,
+   "medianTotalMs": 23.617350000000002,
+   "medianCollectMs": 11.367650000000001,
+   "total": {
+    "ratio": 0.4060231228778957,
+    "lo": 0.39954931159572293,
+    "hi": 0.40871605603401606,
+    "real": true
+   },
+   "collect": {
+    "ratio": 0.26201737462861674,
+    "lo": 0.25704504692909375,
+    "hi": 0.26624540136791147,
+    "real": true
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W1",
+   "variant": "ED",
+   "samples": 30,
+   "medianTotalMs": 360.1335,
+   "medianCollectMs": 62.9013,
+   "total": {
+    "ratio": 6.191318175957364,
+    "lo": 6.091712252996519,
+    "hi": 6.25106923814834,
+    "real": true
+   },
+   "collect": {
+    "ratio": 1.4498364645926827,
+    "lo": 1.422643204384546,
+    "hi": 1.4689046921843407,
+    "real": true
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W2",
+   "variant": "A",
+   "samples": 30,
+   "medianTotalMs": 169.8705,
+   "medianCollectMs": 87.29759999999999,
+   "total": {
+    "ratio": 0.9309860081221945,
+    "lo": 0.9116338395823446,
+    "hi": 0.9499092118261945,
+    "real": true
+   },
+   "collect": {
+    "ratio": 0.9805661717835168,
+    "lo": 0.9540829559941971,
+    "hi": 1.0106375151886495,
+    "real": false
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W2",
+   "variant": "Aprime",
+   "samples": 30,
+   "medianTotalMs": 182.46300000000002,
+   "medianCollectMs": 89.02775,
+   "total": {
+    "ratio": 1.0,
+    "lo": 1.0,
+    "hi": 1.0,
+    "real": false
+   },
+   "collect": {
+    "ratio": 1.0,
+    "lo": 1.0,
+    "hi": 1.0,
+    "real": false
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W2",
+   "variant": "Aprime2",
+   "samples": 30,
+   "medianTotalMs": 183.22050000000002,
+   "medianCollectMs": 88.6332,
+   "total": {
+    "ratio": 1.0041515266108745,
+    "lo": 0.9841566281294636,
+    "hi": 1.0226301787232164,
+    "real": false
+   },
+   "collect": {
+    "ratio": 0.9955682357467195,
+    "lo": 0.9701745325168261,
+    "hi": 1.0294708624949365,
+    "real": false
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W2",
+   "variant": "B",
+   "samples": 30,
+   "medianTotalMs": 199.938,
+   "medianCollectMs": 96.42699999999999,
+   "total": {
+    "ratio": 1.0957728416172043,
+    "lo": 1.0746375721363095,
+    "hi": 1.1085513309351525,
+    "real": true
+   },
+   "collect": {
+    "ratio": 1.0831117263999146,
+    "lo": 1.053030886817562,
+    "hi": 1.1101350137287014,
+    "real": true
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W2",
+   "variant": "D",
+   "samples": 30,
+   "medianTotalMs": 760.953,
+   "medianCollectMs": 241.019,
+   "total": {
+    "ratio": 4.170450995544302,
+    "lo": 4.0745032443657925,
+    "hi": 4.258869293169799,
+    "real": true
+   },
+   "collect": {
+    "ratio": 2.707234542038859,
+    "lo": 2.626692530883193,
+    "hi": 2.7893307926637014,
+    "real": true
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W2",
+   "variant": "E",
+   "samples": 30,
+   "medianTotalMs": 165.14249999999998,
+   "medianCollectMs": 69.0596,
+   "total": {
+    "ratio": 0.9050739053945182,
+    "lo": 0.8862721026900132,
+    "hi": 0.9341418955274687,
+    "real": true
+   },
+   "collect": {
+    "ratio": 0.7757086975690165,
+    "lo": 0.7555123801404021,
+    "hi": 0.8311948860955389,
+    "real": true
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W2",
+   "variant": "ED",
+   "samples": 30,
+   "medianTotalMs": 780.0545,
+   "medianCollectMs": 207.0025,
+   "total": {
+    "ratio": 4.275137973178123,
+    "lo": 4.184579728892123,
+    "hi": 4.320638191219193,
+    "real": true
+   },
+   "collect": {
+    "ratio": 2.3251458112779444,
+    "lo": 2.2610165622129332,
+    "hi": 2.3910523104868666,
+    "real": true
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W3",
+   "variant": "A",
+   "samples": 30,
+   "medianTotalMs": 10.359,
+   "medianCollectMs": 5.849435,
+   "total": {
+    "ratio": 0.899788928748252,
+    "lo": 0.855817635296618,
+    "hi": 0.9258194564645408,
+    "real": true
+   },
+   "collect": {
+    "ratio": 0.9216157089996982,
+    "lo": 0.8868022655490768,
+    "hi": 0.9625897990785283,
+    "real": true
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W3",
+   "variant": "Aprime",
+   "samples": 30,
+   "medianTotalMs": 11.512699999999999,
+   "medianCollectMs": 6.346935,
+   "total": {
+    "ratio": 1.0,
+    "lo": 1.0,
+    "hi": 1.0,
+    "real": false
+   },
+   "collect": {
+    "ratio": 1.0,
+    "lo": 1.0,
+    "hi": 1.0,
+    "real": false
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W3",
+   "variant": "Aprime2",
+   "samples": 30,
+   "medianTotalMs": 11.519649999999999,
+   "medianCollectMs": 6.415665,
+   "total": {
+    "ratio": 1.0006036811521188,
+    "lo": 0.9876979037536836,
+    "hi": 1.0062557762393847,
+    "real": false
+   },
+   "collect": {
+    "ratio": 1.010828848885328,
+    "lo": 0.9724460297974613,
+    "hi": 1.0341913332713837,
+    "real": false
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W3",
+   "variant": "B",
+   "samples": 30,
+   "medianTotalMs": 12.759,
+   "medianCollectMs": 7.40475,
+   "total": {
+    "ratio": 1.108254362573506,
+    "lo": 1.0840030965676808,
+    "hi": 1.1522201946472022,
+    "real": true
+   },
+   "collect": {
+    "ratio": 1.166665484993938,
+    "lo": 1.1012420308761224,
+    "hi": 1.2069725970020435,
+    "real": true
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W3",
+   "variant": "D",
+   "samples": 30,
+   "medianTotalMs": 109.75800000000001,
+   "medianCollectMs": 39.366249999999994,
+   "total": {
+    "ratio": 9.533645452413424,
+    "lo": 9.346590543514163,
+    "hi": 9.653253815425142,
+    "real": true
+   },
+   "collect": {
+    "ratio": 6.2024032072173405,
+    "lo": 5.950005601358859,
+    "hi": 6.284955476946564,
+    "real": true
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W3",
+   "variant": "E",
+   "samples": 30,
+   "medianTotalMs": 11.4082,
+   "medianCollectMs": 6.397,
+   "total": {
+    "ratio": 0.990923067568859,
+    "lo": 0.9758890923986944,
+    "hi": 0.9979299211026534,
+    "real": false
+   },
+   "collect": {
+    "ratio": 1.0078880593546333,
+    "lo": 0.9684159703670309,
+    "hi": 1.0264377285888449,
+    "real": false
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W3",
+   "variant": "ED",
+   "samples": 30,
+   "medianTotalMs": 123.791,
+   "medianCollectMs": 39.552949999999996,
+   "total": {
+    "ratio": 10.752560216109167,
+    "lo": 10.52386855458948,
+    "hi": 11.034761554946035,
+    "real": true
+   },
+   "collect": {
+    "ratio": 6.23181898034248,
+    "lo": 5.986722624952308,
+    "hi": 6.5570234992750285,
+    "real": true
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W4",
+   "variant": "A",
+   "samples": 30,
+   "medianTotalMs": 4.98473,
+   "medianCollectMs": 1.6525,
+   "total": {
+    "ratio": 0.9365462586848939,
+    "lo": 0.926325231063403,
+    "hi": 0.9504530546234999,
+    "real": true
+   },
+   "collect": {
+    "ratio": 0.9374689755917684,
+    "lo": 0.9149607274918822,
+    "hi": 0.951997111240006,
+    "real": true
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W4",
+   "variant": "Aprime",
+   "samples": 30,
+   "medianTotalMs": 5.3224599999999995,
+   "medianCollectMs": 1.762725,
+   "total": {
+    "ratio": 1.0,
+    "lo": 1.0,
+    "hi": 1.0,
+    "real": false
+   },
+   "collect": {
+    "ratio": 1.0,
+    "lo": 1.0,
+    "hi": 1.0,
+    "real": false
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W4",
+   "variant": "Aprime2",
+   "samples": 30,
+   "medianTotalMs": 5.218895,
+   "medianCollectMs": 1.66702,
+   "total": {
+    "ratio": 0.9805418922828918,
+    "lo": 0.9732927201983675,
+    "hi": 0.9961394926190299,
+    "real": false
+   },
+   "collect": {
+    "ratio": 0.9457062219007502,
+    "lo": 0.9331415201012058,
+    "hi": 0.9902410340206828,
+    "real": false
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W4",
+   "variant": "B",
+   "samples": 30,
+   "medianTotalMs": 5.5788150000000005,
+   "medianCollectMs": 1.840875,
+   "total": {
+    "ratio": 1.0481647584011906,
+    "lo": 1.021869441880361,
+    "hi": 1.0647400845519546,
+    "real": true
+   },
+   "collect": {
+    "ratio": 1.0443347657745818,
+    "lo": 1.0142451471294327,
+    "hi": 1.0592211684176471,
+    "real": false
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W4",
+   "variant": "D",
+   "samples": 30,
+   "medianTotalMs": 43.7482,
+   "medianCollectMs": 7.0625,
+   "total": {
+    "ratio": 8.219545097567666,
+    "lo": 8.06712120147138,
+    "hi": 8.55155937007253,
+    "real": true
+   },
+   "collect": {
+    "ratio": 4.0065807201917485,
+    "lo": 3.8251346408028564,
+    "hi": 4.246132164197976,
+    "real": true
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W4",
+   "variant": "E",
+   "samples": 30,
+   "medianTotalMs": 5.4876450000000006,
+   "medianCollectMs": 1.825625,
+   "total": {
+    "ratio": 1.0310354610462082,
+    "lo": 1.019290902698295,
+    "hi": 1.0499762446646284,
+    "real": true
+   },
+   "collect": {
+    "ratio": 1.0356833879362919,
+    "lo": 1.0192971799457813,
+    "hi": 1.0499360678112206,
+    "real": false
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W4",
+   "variant": "ED",
+   "samples": 30,
+   "medianTotalMs": 49.8529,
+   "medianCollectMs": 7.0204,
+   "total": {
+    "ratio": 9.366514731909682,
+    "lo": 9.237970071519161,
+    "hi": 9.687130993910978,
+    "real": true
+   },
+   "collect": {
+    "ratio": 3.9826972443234196,
+    "lo": 3.911250820154302,
+    "hi": 4.294824229406325,
+    "real": true
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W5",
+   "variant": "A",
+   "samples": 30,
+   "medianTotalMs": 28.09675,
+   "medianCollectMs": 2.246315,
+   "total": {
+    "ratio": 0.6990571588872012,
+    "lo": 0.6948127068576202,
+    "hi": 0.7172594879471107,
+    "real": true
+   },
+   "collect": {
+    "ratio": 0.8796211815657882,
+    "lo": 0.8589326887818476,
+    "hi": 0.9447573573155937,
+    "real": true
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W5",
+   "variant": "Aprime",
+   "samples": 30,
+   "medianTotalMs": 40.19235,
+   "medianCollectMs": 2.55373,
+   "total": {
+    "ratio": 1.0,
+    "lo": 1.0,
+    "hi": 1.0,
+    "real": false
+   },
+   "collect": {
+    "ratio": 1.0,
+    "lo": 1.0,
+    "hi": 1.0,
+    "real": false
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W5",
+   "variant": "Aprime2",
+   "samples": 30,
+   "medianTotalMs": 39.81785,
+   "medianCollectMs": 2.5785400000000003,
+   "total": {
+    "ratio": 0.9906823064588163,
+    "lo": 0.9757244599536794,
+    "hi": 1.0586232843914605,
+    "real": false
+   },
+   "collect": {
+    "ratio": 1.00971520090221,
+    "lo": 0.9590798665285751,
+    "hi": 1.06451756629008,
+    "real": false
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W5",
+   "variant": "B",
+   "samples": 30,
+   "medianTotalMs": 97.92535,
+   "medianCollectMs": 2.6039149999999998,
+   "total": {
+    "ratio": 2.4364176267374265,
+    "lo": 2.3831183671847054,
+    "hi": 2.48401250486722,
+    "real": true
+   },
+   "collect": {
+    "ratio": 1.0196516468068277,
+    "lo": 0.9425469256626111,
+    "hi": 1.0387981249580405,
+    "real": false
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W5",
+   "variant": "D",
+   "samples": 30,
+   "medianTotalMs": 594.1505,
+   "medianCollectMs": 12.22095,
+   "total": {
+    "ratio": 14.782676305316809,
+    "lo": 14.586094110067645,
+    "hi": 15.51388171230971,
+    "real": true
+   },
+   "collect": {
+    "ratio": 4.785529402090276,
+    "lo": 4.666898496966887,
+    "hi": 4.943395787809754,
+    "real": true
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W5",
+   "variant": "E",
+   "samples": 30,
+   "medianTotalMs": 40.1351,
+   "medianCollectMs": 2.62548,
+   "total": {
+    "ratio": 0.9985755995854934,
+    "lo": 0.9866055241813314,
+    "hi": 1.008475066891863,
+    "real": false
+   },
+   "collect": {
+    "ratio": 1.0280961573854714,
+    "lo": 0.9936416837662414,
+    "hi": 1.048535930821986,
+    "real": false
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W5",
+   "variant": "ED",
+   "samples": 30,
+   "medianTotalMs": 784.7925,
+   "medianCollectMs": 12.8103,
+   "total": {
+    "ratio": 19.525917245445964,
+    "lo": 18.871157526816326,
+    "hi": 21.02313785349844,
+    "real": true
+   },
+   "collect": {
+    "ratio": 5.0163094767262,
+    "lo": 4.858018370199627,
+    "hi": 5.321947335182185,
+    "real": true
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W6",
+   "variant": "A",
+   "samples": 30,
+   "medianTotalMs": 152.00900000000001,
+   "medianCollectMs": 75.42785,
+   "total": {
+    "ratio": 0.944604113134502,
+    "lo": 0.930075093905524,
+    "hi": 0.9577686516084875,
+    "real": true
+   },
+   "collect": {
+    "ratio": 1.0455288609814504,
+    "lo": 1.0245367166793045,
+    "hi": 1.0565157087156394,
+    "real": true
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W6",
+   "variant": "Aprime",
+   "samples": 30,
+   "medianTotalMs": 160.9235,
+   "medianCollectMs": 72.14325,
+   "total": {
+    "ratio": 1.0,
+    "lo": 1.0,
+    "hi": 1.0,
+    "real": false
+   },
+   "collect": {
+    "ratio": 1.0,
+    "lo": 1.0,
+    "hi": 1.0,
+    "real": false
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W6",
+   "variant": "Aprime2",
+   "samples": 30,
+   "medianTotalMs": 159.42849999999999,
+   "medianCollectMs": 72.62645,
+   "total": {
+    "ratio": 0.9907098714606629,
+    "lo": 0.9734134792768415,
+    "hi": 1.0110540823997847,
+    "real": false
+   },
+   "collect": {
+    "ratio": 1.0066977853090902,
+    "lo": 0.9866919816319323,
+    "hi": 1.0271263909594384,
+    "real": false
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W6",
+   "variant": "B",
+   "samples": 30,
+   "medianTotalMs": 172.777,
+   "medianCollectMs": 81.10300000000001,
+   "total": {
+    "ratio": 1.0736592231712583,
+    "lo": 1.0511376214487762,
+    "hi": 1.095052669769304,
+    "real": true
+   },
+   "collect": {
+    "ratio": 1.1241938781521488,
+    "lo": 1.1074716281342305,
+    "hi": 1.144707595562827,
+    "real": true
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W6",
+   "variant": "D",
+   "samples": 30,
+   "medianTotalMs": 620.633,
+   "medianCollectMs": 213.8385,
+   "total": {
+    "ratio": 3.856695883447726,
+    "lo": 3.803142294920674,
+    "hi": 3.8931973597029668,
+    "real": true
+   },
+   "collect": {
+    "ratio": 2.964081878762047,
+    "lo": 2.9410976724659377,
+    "hi": 2.9950880439045693,
+    "real": true
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W6",
+   "variant": "E",
+   "samples": 30,
+   "medianTotalMs": 142.588,
+   "medianCollectMs": 70.6249,
+   "total": {
+    "ratio": 0.886060768004673,
+    "lo": 0.8713278640204362,
+    "hi": 0.9013071428349495,
+    "real": true
+   },
+   "collect": {
+    "ratio": 0.9789536789651145,
+    "lo": 0.9632359401320636,
+    "hi": 0.995042268110131,
+    "real": true
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W6",
+   "variant": "ED",
+   "samples": 30,
+   "medianTotalMs": 631.0345,
+   "medianCollectMs": 209.7055,
+   "total": {
+    "ratio": 3.9213321857901424,
+    "lo": 3.859811867128834,
+    "hi": 3.9557897442488112,
+    "real": true
+   },
+   "collect": {
+    "ratio": 2.9067930818198517,
+    "lo": 2.884117361885149,
+    "hi": 2.9417879128003843,
+    "real": true
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W7",
+   "variant": "A",
+   "samples": 30,
+   "medianTotalMs": 25.96385,
+   "medianCollectMs": 10.08625,
+   "total": {
+    "ratio": 0.9026681430774125,
+    "lo": 0.8127279611282894,
+    "hi": 0.9493957384530243,
+    "real": true
+   },
+   "collect": {
+    "ratio": 0.8686880431318846,
+    "lo": 0.8190034396128749,
+    "hi": 0.9297924213832146,
+    "real": true
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W7",
+   "variant": "Aprime",
+   "samples": 30,
+   "medianTotalMs": 28.76345,
+   "medianCollectMs": 11.6109,
+   "total": {
+    "ratio": 1.0,
+    "lo": 1.0,
+    "hi": 1.0,
+    "real": false
+   },
+   "collect": {
+    "ratio": 1.0,
+    "lo": 1.0,
+    "hi": 1.0,
+    "real": false
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W7",
+   "variant": "Aprime2",
+   "samples": 30,
+   "medianTotalMs": 27.2408,
+   "medianCollectMs": 10.48995,
+   "total": {
+    "ratio": 0.947063026166889,
+    "lo": 0.8610382442497194,
+    "hi": 1.0104875457017812,
+    "real": false
+   },
+   "collect": {
+    "ratio": 0.9034570963491202,
+    "lo": 0.8600234949815544,
+    "hi": 0.9976173500239167,
+    "real": false
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W7",
+   "variant": "B",
+   "samples": 30,
+   "medianTotalMs": 27.974249999999998,
+   "medianCollectMs": 11.092749999999999,
+   "total": {
+    "ratio": 0.9725624012418538,
+    "lo": 0.8829166406783511,
+    "hi": 1.0358362272740538,
+    "real": false
+   },
+   "collect": {
+    "ratio": 0.9553738297634118,
+    "lo": 0.9087770090997445,
+    "hi": 1.0480140070937989,
+    "real": false
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W7",
+   "variant": "D",
+   "samples": 30,
+   "medianTotalMs": 321.536,
+   "medianCollectMs": 115.76400000000001,
+   "total": {
+    "ratio": 11.178631214266717,
+    "lo": 10.038270793451264,
+    "hi": 11.795744144070612,
+    "real": true
+   },
+   "collect": {
+    "ratio": 9.970286541095005,
+    "lo": 9.441628783012652,
+    "hi": 10.71305157957144,
+    "real": true
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W7",
+   "variant": "E",
+   "samples": 30,
+   "medianTotalMs": 30.3979,
+   "medianCollectMs": 12.5124,
+   "total": {
+    "ratio": 1.0568238511027015,
+    "lo": 0.9517448954949855,
+    "hi": 1.108862024688476,
+    "real": false
+   },
+   "collect": {
+    "ratio": 1.077642560008268,
+    "lo": 1.0105898225695593,
+    "hi": 1.1587711302244565,
+    "real": false
+   }
+  },
+  {
+   "group": "main",
+   "workload": "W7",
+   "variant": "ED",
+   "samples": 30,
+   "medianTotalMs": 345.49850000000004,
+   "medianCollectMs": 118.24799999999999,
+   "total": {
+    "ratio": 12.011719734593731,
+    "lo": 10.861529386443893,
+    "hi": 12.717790372150503,
+    "real": true
+   },
+   "collect": {
+    "ratio": 10.184223445210964,
+    "lo": 9.362821693117224,
+    "hi": 11.20003968415024,
+    "real": true
+   }
+  }
+ ],
+ "dormantHooks": [
+  {
+   "workload": "W1",
+   "total": {
+    "ratio": 1.1465823792853314,
+    "lo": 1.1368608648683622,
+    "hi": 1.1650192858056272
+   },
+   "collect": {
+    "ratio": 1.1448449112770327,
+    "lo": 1.1329292647382132,
+    "hi": 1.168795376895153
+   },
+   "within3Percent": false
+  },
+  {
+   "workload": "W2",
+   "total": {
+    "ratio": 1.0741299990286721,
+    "lo": 1.0526827992911716,
+    "hi": 1.0974515709898416
+   },
+   "collect": {
+    "ratio": 1.0198189870053702,
+    "lo": 0.9905952339238462,
+    "hi": 1.048234356207057
+   },
+   "within3Percent": true
+  },
+  {
+   "workload": "W3",
+   "total": {
+    "ratio": 1.1113717540303116,
+    "lo": 1.0801570823272983,
+    "hi": 1.1687433603918482
+   },
+   "collect": {
+    "ratio": 1.0850509493651952,
+    "lo": 1.0410213628529699,
+    "hi": 1.127647096594679
+   },
+   "within3Percent": false
+  },
+  {
+   "workload": "W4",
+   "total": {
+    "ratio": 1.0677529174097693,
+    "lo": 1.0519389907190038,
+    "hi": 1.079592775041051
+   },
+   "collect": {
+    "ratio": 1.0667019667170954,
+    "lo": 1.0508499126399045,
+    "hi": 1.0923077399515033
+   },
+   "within3Percent": false
+  },
+  {
+   "workload": "W5",
+   "total": {
+    "ratio": 1.4304981892923558,
+    "lo": 1.3932444227210836,
+    "hi": 1.4389574270840761
+   },
+   "collect": {
+    "ratio": 1.1368530237299754,
+    "lo": 1.0542218072834153,
+    "hi": 1.1647898064321627
+   },
+   "within3Percent": false
+  },
+  {
+   "workload": "W6",
+   "total": {
+    "ratio": 1.0586445539408849,
+    "lo": 1.0444827732366493,
+    "hi": 1.0755005465310963
+   },
+   "collect": {
+    "ratio": 0.9564537501731786,
+    "lo": 0.9461817008889521,
+    "hi": 0.9754795687790884
+   },
+   "within3Percent": true
+  },
+  {
+   "workload": "W7",
+   "total": {
+    "ratio": 1.1078268438617538,
+    "lo": 1.0541497046310182,
+    "hi": 1.2275836425467306
+   },
+   "collect": {
+    "ratio": 1.1511612343536994,
+    "lo": 1.0756204163271352,
+    "hi": 1.2220562154139305
+   },
+   "within3Percent": false
+  }
+ ],
+ "hypotheses": [
+  {
+   "id": "H1",
+   "statement": "Region metadata faithfully represents cross-region references",
+   "criterion": "I6 recomputation matches after every operation on seeded random programs: zero mismatches",
+   "verdict": "pass",
+   "evidence": "region_tests: region_tests: passed (1000 seeds x 8 configurations); gc_property_tests: gc_property_tests: 10000 seeds x 8 variants passed"
+  },
+  {
+   "id": "H5",
+   "statement": "Observation never changes collection",
+   "criterion": "identical freed sets across variants A', B, C, D, E, E+D on every workload and seed",
+   "verdict": "pass",
+   "evidence": "differential_tests: differential_tests: 10000 seeds x 8 variants passed; harness digests of per-collection (freed, live) compared on 42 (group, workload, process) cells, mismatches: 0"
+  },
+  {
+   "id": "H2",
+   "statement": "A region overview is cheaper than building it from a full snapshot",
+   "criterion": "export at least 2x faster at N >= 10^5 with the 95% CI of the ratio excluding 2",
+   "verdict": "fail",
+   "evidence": "N=1,000: 26.8x (CI 25.8-28.3); N=10,000: 6.6x (CI 6.4-6.7); N=100,000: 1.2x (CI 1.2-1.2); N=1,000,000: 1.4x (CI 1.3-1.4)"
+  },
+  {
+   "id": "H3-mutator",
+   "statement": "Batching lowers telemetry overhead at trace level mutator",
+   "criterion": "B=1,024 removes >= 50% of B=1's overhead with the CI excluding 0 (passes if so on >= 4 of 7 workloads)",
+   "verdict": "pass",
+   "evidence": "7 of 7 workloads pass; W1: 91% removed; W2: 83% removed; W3: 88% removed; W4: 88% removed; W5: 86% removed; W6: 91% removed; W7: 83% removed"
+  },
+  {
+   "id": "H3-full",
+   "statement": "Batching lowers telemetry overhead at trace level full",
+   "criterion": "B=1,024 removes >= 50% of B=1's overhead with the CI excluding 0 (passes if so on >= 4 of 7 workloads)",
+   "verdict": "pass",
+   "evidence": "7 of 7 workloads pass; W1: 90% removed; W2: 90% removed; W3: 89% removed; W4: 89% removed; W5: 86% removed; W6: 94% removed; W7: 85% removed"
+  },
+  {
+   "id": "H4",
+   "statement": "Region benefits are not cancelled by their costs",
+   "criterion": "break-even k* <= 1 overview per collection on >= 4 of 7 workloads",
+   "verdict": "pass",
+   "evidence": "barrier 57.7 ns per setField (CI 55.7 to 59.6); region metadata 69.276 B per live object; Object struct 48 B (V1) -> 64 B (V2); k* <= 1 on 6 of 7 workloads: W1 0.044, W2 0.312, W3 0.053, W4 0.100, W5 24.405, W6 0.042, W7 0.000"
+  },
+  {
+   "id": "DORMANT",
+   "statement": "Dormant V2 hooks (everything off) cost under 3 % of collect time on W6 versus V1 (I.3 acceptance)",
+   "criterion": "A' collect time within 3 % of A on W6",
+   "verdict": "pass",
+   "evidence": "A'/A collect ratio on W6 0.956 (CI 0.946-0.975). The I.3 criterion covers collect time only; WHOLE-RUN A'/A is W1 1.15x, W2 1.07x, W3 1.11x, W4 1.07x, W5 1.43x, W6 1.06x, W7 1.11x (above 1 means V2 with everything off is slower than V1; the setField path also gained reference-integrity hardening and a region branch)"
+  }
+ ],
+ "jvm": [
+  {
+   "program": "J1",
+   "collector": "g1",
+   "runs": 10,
+   "gcCount": 101.0,
+   "gcPauseTotalMs": 96.41800000000003,
+   "heapAfterLastGcBytes": 1048576.0,
+   "allocatedBytesMainThread": 23845192.0,
+   "wallMs": 145.97662500000007,
+   "jdk": "openjdk version \"21.0.12.1\" 2026-08-18 LTS"
+  },
+  {
+   "program": "J1",
+   "collector": "serial",
+   "runs": 10,
+   "gcCount": 101.0,
+   "gcPauseTotalMs": 67.08550000000001,
+   "heapAfterLastGcBytes": 1048576.0,
+   "allocatedBytesMainThread": 23845192.0,
+   "wallMs": 116.67574999999997,
+   "jdk": "openjdk version \"21.0.12.1\" 2026-08-18 LTS"
+  },
+  {
+   "program": "J2",
+   "collector": "g1",
+   "runs": 10,
+   "gcCount": 40.0,
+   "gcPauseTotalMs": 68.8355,
+   "heapAfterLastGcBytes": 1048576.0,
+   "allocatedBytesMainThread": 31704184.0,
+   "wallMs": 115.44772950000004,
+   "jdk": "openjdk version \"21.0.12.1\" 2026-08-18 LTS"
+  },
+  {
+   "program": "J2",
+   "collector": "serial",
+   "runs": 10,
+   "gcCount": 40.0,
+   "gcPauseTotalMs": 50.702,
+   "heapAfterLastGcBytes": 1048576.0,
+   "allocatedBytesMainThread": 31704184.0,
+   "wallMs": 97.69908350000023,
+   "jdk": "openjdk version \"21.0.12.1\" 2026-08-18 LTS"
+  },
+  {
+   "program": "J3",
+   "collector": "g1",
+   "runs": 10,
+   "gcCount": 20.0,
+   "gcPauseTotalMs": 36.521,
+   "heapAfterLastGcBytes": 1048576.0,
+   "allocatedBytesMainThread": 2257760.0,
+   "wallMs": 79.73718750000015,
+   "jdk": "openjdk version \"21.0.12.1\" 2026-08-18 LTS"
+  },
+  {
+   "program": "J3",
+   "collector": "serial",
+   "runs": 10,
+   "gcCount": 20.0,
+   "gcPauseTotalMs": 27.349,
+   "heapAfterLastGcBytes": 1048576.0,
+   "allocatedBytesMainThread": 2257760.0,
+   "wallMs": 73.35364550000011,
+   "jdk": "openjdk version \"21.0.12.1\" 2026-08-18 LTS"
+  },
+  {
+   "program": "J4",
+   "collector": "g1",
+   "runs": 10,
+   "gcCount": 3.0,
+   "gcPauseTotalMs": 5.099,
+   "heapAfterLastGcBytes": 1048576.0,
+   "allocatedBytesMainThread": 307088.0,
+   "wallMs": 47.25847849999987,
+   "jdk": "openjdk version \"21.0.12.1\" 2026-08-18 LTS"
+  },
+  {
+   "program": "J4",
+   "collector": "serial",
+   "runs": 10,
+   "gcCount": 3.0,
+   "gcPauseTotalMs": 3.7675,
+   "heapAfterLastGcBytes": 1048576.0,
+   "allocatedBytesMainThread": 307088.0,
+   "wallMs": 46.09039600000031,
+   "jdk": "openjdk version \"21.0.12.1\" 2026-08-18 LTS"
+  },
+  {
+   "program": "J5",
+   "collector": "g1",
+   "runs": 10,
+   "gcCount": 11.0,
+   "gcPauseTotalMs": 23.021,
+   "heapAfterLastGcBytes": 1048576.0,
+   "allocatedBytesMainThread": 1704672.0,
+   "wallMs": 66.55197900000064,
+   "jdk": "openjdk version \"21.0.12.1\" 2026-08-18 LTS"
+  },
+  {
+   "program": "J5",
+   "collector": "serial",
+   "runs": 10,
+   "gcCount": 11.0,
+   "gcPauseTotalMs": 15.763000000000002,
+   "heapAfterLastGcBytes": 2097152.0,
+   "allocatedBytesMainThread": 1704672.0,
+   "wallMs": 58.88770849999992,
+   "jdk": "openjdk version \"21.0.12.1\" 2026-08-18 LTS"
+  }
+ ],
+ "shapes": [
+  {
+   "program": "J1",
+   "workload": "W1",
+   "custom": {
+    "collections": 101.0,
+    "allocations": 1000000.0,
+    "freedFraction": 0.999,
+    "liveObjectsAfterLastGc": 1000.0
+   },
+   "jvm": [
+    {
+     "program": "J1",
+     "collector": "g1",
+     "runs": 10,
+     "gcCount": 101.0,
+     "gcPauseTotalMs": 96.41800000000003,
+     "heapAfterLastGcBytes": 1048576.0,
+     "allocatedBytesMainThread": 23845192.0,
+     "wallMs": 145.97662500000007,
+     "jdk": "openjdk version \"21.0.12.1\" 2026-08-18 LTS"
+    },
+    {
+     "program": "J1",
+     "collector": "serial",
+     "runs": 10,
+     "gcCount": 101.0,
+     "gcPauseTotalMs": 67.08550000000001,
+     "heapAfterLastGcBytes": 1048576.0,
+     "allocatedBytesMainThread": 23845192.0,
+     "wallMs": 116.67574999999997,
+     "jdk": "openjdk version \"21.0.12.1\" 2026-08-18 LTS"
+    }
+   ]
+  },
+  {
+   "program": "J2",
+   "workload": "W2",
+   "custom": {
+    "collections": 40.0,
+    "allocations": 2000000.0,
+    "freedFraction": 1.0,
+    "liveObjectsAfterLastGc": 0.0
+   },
+   "jvm": [
+    {
+     "program": "J2",
+     "collector": "g1",
+     "runs": 10,
+     "gcCount": 40.0,
+     "gcPauseTotalMs": 68.8355,
+     "heapAfterLastGcBytes": 1048576.0,
+     "allocatedBytesMainThread": 31704184.0,
+     "wallMs": 115.44772950000004,
+     "jdk": "openjdk version \"21.0.12.1\" 2026-08-18 LTS"
+    },
+    {
+     "program": "J2",
+     "collector": "serial",
+     "runs": 10,
+     "gcCount": 40.0,
+     "gcPauseTotalMs": 50.702,
+     "heapAfterLastGcBytes": 1048576.0,
+     "allocatedBytesMainThread": 31704184.0,
+     "wallMs": 97.69908350000023,
+     "jdk": "openjdk version \"21.0.12.1\" 2026-08-18 LTS"
+    }
+   ]
+  },
+  {
+   "program": "J3",
+   "workload": "W3",
+   "custom": {
+    "collections": 20.0,
+    "allocations": 106335.0,
+    "freedFraction": 0.797592514223915,
+    "liveObjectsAfterLastGc": 21523.0
+   },
+   "jvm": [
+    {
+     "program": "J3",
+     "collector": "g1",
+     "runs": 10,
+     "gcCount": 20.0,
+     "gcPauseTotalMs": 36.521,
+     "heapAfterLastGcBytes": 1048576.0,
+     "allocatedBytesMainThread": 2257760.0,
+     "wallMs": 79.73718750000015,
+     "jdk": "openjdk version \"21.0.12.1\" 2026-08-18 LTS"
+    },
+    {
+     "program": "J3",
+     "collector": "serial",
+     "runs": 10,
+     "gcCount": 20.0,
+     "gcPauseTotalMs": 27.349,
+     "heapAfterLastGcBytes": 1048576.0,
+     "allocatedBytesMainThread": 2257760.0,
+     "wallMs": 73.35364550000011,
+     "jdk": "openjdk version \"21.0.12.1\" 2026-08-18 LTS"
+    }
+   ]
+  },
+  {
+   "program": "J4",
+   "workload": "W4",
+   "custom": {
+    "collections": 3.0,
+    "allocations": 35009.0,
+    "freedFraction": 1.0,
+    "liveObjectsAfterLastGc": 0.0
+   },
+   "jvm": [
+    {
+     "program": "J4",
+     "collector": "g1",
+     "runs": 10,
+     "gcCount": 3.0,
+     "gcPauseTotalMs": 5.099,
+     "heapAfterLastGcBytes": 1048576.0,
+     "allocatedBytesMainThread": 307088.0,
+     "wallMs": 47.25847849999987,
+     "jdk": "openjdk version \"21.0.12.1\" 2026-08-18 LTS"
+    },
+    {
+     "program": "J4",
+     "collector": "serial",
+     "runs": 10,
+     "gcCount": 3.0,
+     "gcPauseTotalMs": 3.7675,
+     "heapAfterLastGcBytes": 1048576.0,
+     "allocatedBytesMainThread": 307088.0,
+     "wallMs": 46.09039600000031,
+     "jdk": "openjdk version \"21.0.12.1\" 2026-08-18 LTS"
+    }
+   ]
+  },
+  {
+   "program": "J5",
+   "workload": "W7",
+   "custom": {
+    "collections": 11.0,
+    "allocations": 100001.0,
+    "freedFraction": 1.0,
+    "liveObjectsAfterLastGc": 0.0
+   },
+   "jvm": [
+    {
+     "program": "J5",
+     "collector": "g1",
+     "runs": 10,
+     "gcCount": 11.0,
+     "gcPauseTotalMs": 23.021,
+     "heapAfterLastGcBytes": 1048576.0,
+     "allocatedBytesMainThread": 1704672.0,
+     "wallMs": 66.55197900000064,
+     "jdk": "openjdk version \"21.0.12.1\" 2026-08-18 LTS"
+    },
+    {
+     "program": "J5",
+     "collector": "serial",
+     "runs": 10,
+     "gcCount": 11.0,
+     "gcPauseTotalMs": 15.763000000000002,
+     "heapAfterLastGcBytes": 2097152.0,
+     "allocatedBytesMainThread": 1704672.0,
+     "wallMs": 58.88770849999992,
+     "jdk": "openjdk version \"21.0.12.1\" 2026-08-18 LTS"
+    }
+   ]
+  }
+ ],
+ "h2": [
+  {
+   "objects": 1000,
+   "snapshotMs": 0.0402705,
+   "exportMs": 0.0015,
+   "ratio": 26.847,
+   "lo": 25.848799480856584,
+   "hi": 28.346153846153847,
+   "snapshotBytes": 218226,
+   "exportBytes": 4032,
+   "samples": 90
+  },
+  {
+   "objects": 10000,
+   "snapshotMs": 0.5577080000000001,
+   "exportMs": 0.084583,
+   "ratio": 6.5936181029284855,
+   "lo": 6.439662047364226,
+   "hi": 6.706719709725615,
+   "snapshotBytes": 2174043,
+   "exportBytes": 193632,
+   "samples": 90
+  },
+  {
+   "objects": 100000,
+   "snapshotMs": 7.7166049999999995,
+   "exportMs": 6.315225,
+   "ratio": 1.2219049994259903,
+   "lo": 1.2065507589197713,
+   "hi": 1.2330175543881208,
+   "snapshotBytes": 21747987,
+   "exportBytes": 3297720,
+   "samples": 90
+  },
+  {
+   "objects": 1000000,
+   "snapshotMs": 170.031,
+   "exportMs": 123.16999999999999,
+   "ratio": 1.3804579037103193,
+   "lo": 1.3197023484434733,
+   "hi": 1.4230339598026824,
+   "snapshotBytes": 217483665,
+   "exportBytes": 36447216,
+   "samples": 30
+  }
+ ],
+ "noiseFloor": {
+  "W1": {
+   "totalMs": 0.02,
+   "collectMs": 0.02
+  },
+  "W2": {
+   "totalMs": 0.02,
+   "collectMs": 0.02
+  },
+  "W3": {
+   "totalMs": 0.02,
+   "collectMs": 0.02
+  },
+  "W4": {
+   "totalMs": 0.02,
+   "collectMs": 0.0543
+  },
+  "W5": {
+   "totalMs": 0.02,
+   "collectMs": 0.02
+  },
+  "W6": {
+   "totalMs": 0.02,
+   "collectMs": 0.02
+  },
+  "W7": {
+   "totalMs": 0.0529,
+   "collectMs": 0.0965
+  }
+ },
+ "barrier": {
+  "nsPerSetField": 57.733,
+  "ciLoNs": 55.699299999999994,
+  "ciHiNs": 59.62665
+ },
+ "breakEven": [
+  {
+   "workload": "W1",
+   "extraMsPerCollection": 0.02164108910891088,
+   "liveObjects": 11000.0,
+   "savingPerOverviewMs": 0.49487539347424686,
+   "kStar": 0.04373038020132854
+  },
+  {
+   "workload": "W2",
+   "extraMsPerCollection": 0.4368749999999991,
+   "liveObjects": 100000.0,
+   "savingPerOverviewMs": 1.4013799999999996,
+   "kStar": 0.3117462786681694
+  },
+  {
+   "workload": "W3",
+   "extraMsPerCollection": 0.06231500000000008,
+   "liveObjects": 67575.0,
+   "savingPerOverviewMs": 1.1648940299295372,
+   "kStar": 0.0534941362896069
+  },
+  {
+   "workload": "W4",
+   "extraMsPerCollection": 0.085451666666667,
+   "liveObjects": 35009.0,
+   "savingPerOverviewMs": 0.8542798690318274,
+   "kStar": 0.10002771897634799
+  },
+  {
+   "workload": "W5",
+   "extraMsPerCollection": 11.5466,
+   "liveObjects": 10000.0,
+   "savingPerOverviewMs": 0.47312500000000013,
+   "kStar": 24.40496697490092
+  },
+  {
+   "workload": "W6",
+   "extraMsPerCollection": 1.9755833333333328,
+   "liveObjects": 1000001.0,
+   "savingPerOverviewMs": 46.86107142816214,
+   "kStar": 0.04215830481729158
+  },
+  {
+   "workload": "W7",
+   "extraMsPerCollection": -0.07174545454545464,
+   "liveObjects": 100001.0,
+   "savingPerOverviewMs": 1.4014013606696374,
+   "kStar": 0.0
+  }
+ ],
+ "h3": [
+  {
+   "workload": "W1",
+   "level": "mutator",
+   "overheadByBatch": {
+    "1": 87.76908857869772,
+    "64": 9.602672485862092,
+    "1024": 7.911423564800202,
+    "8192": 7.802500308268032
+   },
+   "removalAt1024": 0.9098609351775772,
+   "ciLo": 0.9066208269419438,
+   "ciHi": 0.9118806100812508,
+   "pass": true
+  },
+  {
+   "workload": "W1",
+   "level": "full",
+   "overheadByBatch": {
+    "1": 171.85634935987719,
+    "64": 21.055474670549145,
+    "1024": 17.461352238930914,
+    "8192": 17.44913464355731
+   },
+   "removalAt1024": 0.8983956525087948,
+   "ciLo": 0.8929419438458208,
+   "ciHi": 0.9016307266934847,
+   "pass": true
+  },
+  {
+   "workload": "W2",
+   "level": "mutator",
+   "overheadByBatch": {
+    "1": 53.61763739605911,
+    "64": 9.705545718811768,
+    "1024": 8.908921270027832,
+    "8192": 8.348711181757363
+   },
+   "removalAt1024": 0.8338434570658155,
+   "ciLo": 0.828585044297398,
+   "ciHi": 0.8398772153765071,
+   "pass": true
+  },
+  {
+   "workload": "W2",
+   "level": "full",
+   "overheadByBatch": {
+    "1": 97.42596437737387,
+    "64": 10.570197304720155,
+    "1024": 9.459795788476153,
+    "8192": 8.913106554524173
+   },
+   "removalAt1024": 0.9029027236329509,
+   "ciLo": 0.8972358879837543,
+   "ciHi": 0.9074403502448359,
+   "pass": true
+  },
+  {
+   "workload": "W3",
+   "level": "mutator",
+   "overheadByBatch": {
+    "1": 67.42971273389993,
+    "64": 9.198386383731213,
+    "1024": 8.205473303379708,
+    "8192": 7.919075587794801
+   },
+   "removalAt1024": 0.8783107183659341,
+   "ciLo": 0.8762611361255411,
+   "ciHi": 0.8822933599418453,
+   "pass": true
+  },
+  {
+   "workload": "W3",
+   "level": "full",
+   "overheadByBatch": {
+    "1": 248.9909778234902,
+    "64": 33.0084176906837,
+    "1024": 28.17952326819322,
+    "8192": 28.323426983525508
+   },
+   "removalAt1024": 0.886825123084702,
+   "ciLo": 0.8837555667430519,
+   "ciHi": 0.8918907725434424,
+   "pass": true
+  },
+  {
+   "workload": "W4",
+   "level": "mutator",
+   "overheadByBatch": {
+    "1": 57.22754820118239,
+    "64": 7.743241436677462,
+    "1024": 6.684894982323757,
+    "8192": 6.687011675232466
+   },
+   "removalAt1024": 0.8831874649107256,
+   "ciLo": 0.8597055515115364,
+   "ciHi": 0.8903387869533927,
+   "pass": true
+  },
+  {
+   "workload": "W4",
+   "level": "full",
+   "overheadByBatch": {
+    "1": 104.18515492706693,
+    "64": 13.552115207510177,
+    "1024": 11.877105552419717,
+    "8192": 12.161745046195895
+   },
+   "removalAt1024": 0.8860000202453595,
+   "ciLo": 0.8669550950022583,
+   "ciHi": 0.8885576987946359,
+   "pass": true
+  },
+  {
+   "workload": "W5",
+   "level": "mutator",
+   "overheadByBatch": {
+    "1": 78.78094721530535,
+    "64": 12.694764264523393,
+    "1024": 11.156258474889672,
+    "8192": 10.963339168166465
+   },
+   "removalAt1024": 0.8583888761276246,
+   "ciLo": 0.8542401731789783,
+   "ciHi": 0.8629569305789924,
+   "pass": true
+  },
+  {
+   "workload": "W5",
+   "level": "full",
+   "overheadByBatch": {
+    "1": 83.58289161181102,
+    "64": 13.266043736594266,
+    "1024": 11.94231733274163,
+    "8192": 11.546781390991347
+   },
+   "removalAt1024": 0.8571200744261631,
+   "ciLo": 0.8504099456385428,
+   "ciHi": 0.8594964671889365,
+   "pass": true
+  },
+  {
+   "workload": "W6",
+   "level": "mutator",
+   "overheadByBatch": {
+    "1": 83.77630515226245,
+    "64": 9.085037960415077,
+    "1024": 7.645959517391404,
+    "8192": 7.502992713946531
+   },
+   "removalAt1024": 0.9087336269665395,
+   "ciLo": 0.9078378454241507,
+   "ciHi": 0.909321631331042,
+   "pass": true
+  },
+  {
+   "workload": "W6",
+   "level": "full",
+   "overheadByBatch": {
+    "1": 158.0313144734124,
+    "64": 9.99611342475116,
+    "1024": 8.95060173059709,
+    "8192": 8.523244219229365
+   },
+   "removalAt1024": 0.9433618472362769,
+   "ciLo": 0.9422624969480886,
+   "ciHi": 0.944046523956537,
+   "pass": true
+  },
+  {
+   "workload": "W7",
+   "level": "mutator",
+   "overheadByBatch": {
+    "1": 53.08189210804914,
+    "64": 9.914455709193794,
+    "1024": 8.809816820690155,
+    "8192": 9.028123348234855
+   },
+   "removalAt1024": 0.834033481648363,
+   "ciLo": 0.8284363551505921,
+   "ciHi": 0.8465958375309999,
+   "pass": true
+  },
+  {
+   "workload": "W7",
+   "level": "full",
+   "overheadByBatch": {
+    "1": 134.8576542507863,
+    "64": 22.031095947618144,
+    "1024": 19.75973106374061,
+    "8192": 19.47518441981918
+   },
+   "removalAt1024": 0.8534771261333474,
+   "ciLo": 0.8503565201533076,
+   "ciHi": 0.864386141181434,
+   "pass": true
+  }
+ ],
+ "w6Rounds": {
+  "A": [
+   11.1387,
+   11.6492,
+   12.2303,
+   12.6749,
+   13.1846,
+   13.6744
+  ],
+  "Aprime": [
+   10.3333,
+   10.9752,
+   11.597,
+   12.2944,
+   12.9464,
+   13.5093
+  ],
+  "E": [
+   12.2738,
+   11.7519,
+   11.8135,
+   11.7735,
+   11.8729,
+   11.6585
+  ]
+ }
+}

@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://garbage-cd.dev/contracts/static-analysis.schema.json",
+  "title": "Garbage-CD static analysis result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "language", "ast", "nodeCount", "truncated", "diagnostics"],
+  "properties": {
+    "schema": { "const": "gcd.static-analysis/1" },
+    "language": { "type": "string", "enum": ["java", "gcd-toy"] },
+    "ast": {
+      "oneOf": [
+        { "$ref": "#/$defs/astNode" },
+        { "type": "null" }
+      ]
+    },
+    "nodeCount": { "type": "integer", "minimum": 0, "maximum": 5000 },
+    "truncated": { "type": "boolean" },
+    "diagnostics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["severity", "code", "message"],
+        "properties": {
+          "severity": { "type": "string", "enum": ["error", "warning", "note"] },
+          "code": { "type": "string" },
+          "message": { "type": "string" },
+          "location": { "$ref": "structured-error.schema.json#/$defs/location" }
+        }
+      }
+    },
+    "java": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mainClass", "publicTypeName", "packageName", "compileMs"],
+      "properties": {
+        "mainClass": { "type": ["string", "null"] },
+        "publicTypeName": { "type": ["string", "null"] },
+        "packageName": { "type": ["string", "null"] },
+        "compileMs": { "$ref": "#/$defs/metric" }
+      }
+    }
+  },
+  "$defs": {
+    "metric": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "unit", "provenance", "source"],
+      "properties": {
+        "value": { "type": ["number", "null"] },
+        "unit": { "type": "string" },
+        "provenance": {
+          "type": "string",
+          "enum": ["measured", "estimated", "reconstructed", "unavailable"]
+        },
+        "source": { "type": "string" },
+        "note": { "type": "string" }
+      }
+    },
+    "span": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["start", "end", "line", "column", "endLine", "endColumn", "provenance"],
+      "properties": {
+        "start": { "type": "integer", "minimum": 0 },
+        "end": { "type": "integer", "minimum": 0 },
+        "line": { "type": "integer", "minimum": 1 },
+        "column": { "type": "integer", "minimum": 1 },
+        "endLine": { "type": "integer", "minimum": 1 },
+        "endColumn": { "type": "integer", "minimum": 1 },
+        "provenance": { "type": "string", "enum": ["compiler", "derived"] }
+      }
+    },
+    "astNode": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "kind", "children"],
+      "properties": {
+        "id": { "type": "integer", "minimum": 0 },
+        "kind": { "type": "string" },
+        "label": { "type": "string", "maxLength": 80 },
+        "span": { "$ref": "#/$defs/span" },
+        "synthetic": { "const": true },
+        "children": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/astNode" }
+        }
+      }
+    }
+  }
+}

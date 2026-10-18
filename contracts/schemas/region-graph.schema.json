@@ -1,0 +1,145 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://garbage-cd.dev/contracts/region-graph.schema.json",
+  "title": "Garbage-CD region graph",
+  "description": "Region metadata after a collection's sweep (point gc_end) or at program end. Regions are address blocks of regionSize consecutive slots; slotEnd is the last slot index (inclusive). Edges are cross-region reference-field counts between in-use objects. Observational only: nothing here affects what is marked or freed.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "runId",
+    "index",
+    "point",
+    "regionSize",
+    "gcIndex",
+    "statementIndex",
+    "verified",
+    "regions",
+    "edges"
+  ],
+  "properties": {
+    "schema": {
+      "const": "gcd.region-graph/1"
+    },
+    "runId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "index": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "point": {
+      "enum": [
+        "gc_end",
+        "program_end"
+      ]
+    },
+    "regionSize": {
+      "enum": [
+        16,
+        32,
+        64,
+        128,
+        256
+      ]
+    },
+    "gcIndex": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "statementIndex": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "verified": {
+      "type": "boolean",
+      "description": "true if verifyRegions() recomputed every counter and found no mismatch"
+    },
+    "regions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "slotStart",
+          "slotEnd",
+          "liveObjects",
+          "allocatedTotal",
+          "survivorsLastGc",
+          "freedLastGc",
+          "rootTargets",
+          "intraEdges"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "slotStart": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "slotEnd": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "liveObjects": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "allocatedTotal": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "survivorsLastGc": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "freedLastGc": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "rootTargets": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "intraEdges": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "from",
+          "to",
+          "count"
+        ],
+        "properties": {
+          "from": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "to": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "count": {
+            "type": "integer",
+            "minimum": 1
+          }
+        }
+      }
+    }
+  }
+}

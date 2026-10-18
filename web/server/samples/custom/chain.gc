@@ -1,0 +1,5 @@
+root = new Object();
+tail = new Object();
+root.next = tail;
+tail = null;
+gc();
